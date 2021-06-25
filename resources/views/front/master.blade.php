@@ -4,9 +4,35 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Some Production Company</title>
-    <meta name="description" content="" />
+    <title>TV and Film Production | Level Five Productions | Nairobi</title>
+	 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta name="description" content="Audio Visual Productions Company | Level Five Productions | Nairobi"/>
+	<link rel="canonical" href="https://levelfiveproductions.com"/>
+	{{-- OG --}}
+	<meta property="og:title" content="TV and Film Production | Level Five Productions | Nairobi"/>
+	<meta property="og:description" content="Audio Visual | Level Five Productions | Nairobi"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:image:width" content="629"/>
+	<meta property="og:image:height" content="617"/>
+	<meta property="og:url" content="https://levelfiveproductions.com"/>
+	<meta property="og:site_name" content="levelfiveproductions"/>
+	<meta property="og:type" content="website"/>
+	<meta name="fb_admins_meta_tag" content="#"/>
+	<meta property="fb:admins" content="#"/>
+	{{-- OG --}}
+	{{-- Google Verification --}}
+	<meta name="google-site-verification" content=""/>
+	{{-- G-Verify --}}
+
+	{{-- Twitter Tags --}}
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:title" content="TV and Film Production | Level Five Productions | Nairobi"/>
+	<meta name="twitter:description" content="Audio Visual | Level Five Productions | Nairobi"/>
+	<meta name="twitter:image" content=""/>
+	{{-- Twitter Tags --}}
+
+
     <!--Favicon -->
 	<link rel="icon" type="image/png" href="images/favicon.png" />
 	<!-- CSS Files -->
