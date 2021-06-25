@@ -1666,7 +1666,7 @@ body.parallax #clients{
 	}
 
 	.w-second-area .w-left ul.w-descs li{
-		list-style-image: ;
+		/* list-style-image: ; */
 		list-style-position: inside;
 		margin:6px auto;
 	}
@@ -4890,6 +4890,8 @@ body.parallax #clients{
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	text-align: center;
+	width:95%;
+	font-weight: 600;
   }
   .overlayss h1{
 	color: #404040;
@@ -4950,3 +4952,10 @@ body.parallax #clients{
 	padding: 0 !important;
 }
   
+/*  */
+.award-image img{
+	max-width:400px;
+	height:auto;
+}
+/*  */
+

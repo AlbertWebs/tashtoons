@@ -24,7 +24,7 @@
                 <div class="row">
 
                     <div class="row margindiv">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated" data-animation="fadeIn" data-animation-delay="300">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated single-service" data-animation="fadeIn" data-animation-delay="300">
                             <div class="containerss">
                                 <img src="{{asset('/theme/images/b-slide1.jpg')}}" alt="Avatar" class="imagess">
                                 <div class="overlayss">
@@ -34,7 +34,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated" data-animation="fadeIn" data-animation-delay="300">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated single-service" data-animation="fadeIn" data-animation-delay="300">
                             <div class="containerss">
                                 <img src="{{asset('/theme/images/b-slide1.jpg')}}" alt="Avatar" class="imagess">
                                 <div class="overlayss">
@@ -46,7 +46,7 @@
                     </div>
                     
                     <div class="row margindiv">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated" data-animation="fadeIn" data-animation-delay="300">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated single-service" data-animation="fadeIn" data-animation-delay="300">
                             <div class="containerss">
                                 <img src="{{asset('/theme/images/b-slide1.jpg')}}" alt="Avatar" class="imagess">
                                 <div class="overlayss">
@@ -56,7 +56,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated" data-animation="fadeIn" data-animation-delay="300">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated single-service" data-animation="fadeIn" data-animation-delay="300">
                             <div class="containerss">
                                 <img src="{{asset('/theme/images/b-slide1.jpg')}}" alt="Avatar" class="imagess">
                                 <div class="overlayss">
@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="row margindiv">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated" data-animation="fadeIn" data-animation-delay="300">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated single-service" data-animation="fadeIn" data-animation-delay="300">
                             <div class="containerss">
                                 <img src="{{asset('/theme/images/b-slide1.jpg')}}" alt="Avatar" class="imagess">
                                 <div class="overlayss">
@@ -78,7 +78,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated" data-animation="fadeIn" data-animation-delay="300">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated single-service" data-animation="fadeIn" data-animation-delay="300">
                             <div class="containerss">
                                 <img src="{{asset('/theme/images/b-slide1.jpg')}}" alt="Avatar" class="imagess">
                                 <div class="overlayss">
@@ -90,7 +90,7 @@
                     </div>
 
                     <div class="row margindiv">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated" data-animation="fadeIn" data-animation-delay="300">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated single-service" data-animation="fadeIn" data-animation-delay="300">
                             <div class="containerss">
                                 <img src="{{asset('/theme/images/b-slide1.jpg')}}" alt="Avatar" class="imagess">
                                 <div class="overlayss">
@@ -100,7 +100,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated" data-animation="fadeIn" data-animation-delay="300">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated single-service" data-animation="fadeIn" data-animation-delay="300">
                             <div class="containerss">
                                 <img src="{{asset('/theme/images/b-slide1.jpg')}}" alt="Avatar" class="imagess">
                                 <div class="overlayss">
@@ -113,7 +113,7 @@
 
                     <div class="row margindiv">
                         
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated" data-animation="fadeIn" data-animation-delay="300">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated single-service" data-animation="fadeIn" data-animation-delay="300">
                             <div class="containerss">
                                 <img src="{{asset('/theme/images/b-slide1.jpg')}}" alt="Avatar" class="imagess">
                                 <div class="overlayss">
@@ -123,7 +123,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated" data-animation="fadeIn" data-animation-delay="300">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animated single-service" data-animation="fadeIn" data-animation-delay="300">
                             <div class="containerss">
                                 <img src="{{asset('/theme/images/b-slide1.jpg')}}" alt="Avatar" class="imagess">
                                 <div class="overlayss">

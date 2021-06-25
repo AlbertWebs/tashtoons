@@ -980,6 +980,35 @@
 		.about-header span{
 			font-size: 48px;
 		}
+
+		/*  */
+		/*  */
+		.award-image{
+			margin-bottom: 20px;
+		}
+
+		.award-image img{
+			max-width:90%;
+			height:auto;
+		}
+		/*  */
+
+		/*  */
+		.home-fixed-text{
+			max-width:90%;
+		}
+		/*  */
+
+		/*  */
+		.single-service{
+			
+			max-width: 95%;
+			float:none;
+			margin:0 auto;
+			margin-bottom: 15px;
+
+		}
+		/*  */
 	}
 /* .................... */
 

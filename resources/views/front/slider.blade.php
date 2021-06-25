@@ -1,13 +1,13 @@
 <!-- Home -->
 <section id="home" class="container relative pattern-black">
 
-    <div class="fullscreen soft-bg-1 absolute z-1 pattern-black"></div>
+    <div class="fullscreen soft-bg-2 absolute z-1 pattern-blacka"></div>
 
     <!-- Ful Screen Home -->
     <div id="fullscreen" class="image-bg">
 
         <!-- Video -->
-        <div id="P10" class="player video-container p-video-v" data-property="{videoURL:'yk7easdY2sMa',containment:'#fullscreen',autoPlay:true, showControls:false, mute:true, startAt:0, opacity:1}"></div>
+        <div id="P10" class="player video-container p-video-v" data-property="{videoURL:'yk7easdY2sM',containment:'#fullscreen',autoPlay:true, showControls:false, mute:true, startAt:0, opacity:1, quality:'highres'}"></div>
         <!-- End Video -->
 
         <!-- Home Elements v2 -->
