@@ -14,3 +14,4 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::POST('/send-message', [HomeController::class, 'send_message'])->name('send');
