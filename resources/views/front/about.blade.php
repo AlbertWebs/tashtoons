@@ -1,4 +1,4 @@
-<section id="features" class="big-reserve container about-section animated" data-animation="fadeIn" data-animation-delay="200">
+<section id="features" class="big-reserve container about-section min-height animated" data-animation="fadeIn" data-animation-delay="200">
 
     <!-- Features Background -->
     <div class="features-background parallax1 soft-bg-1" style="background-position: 50% 50%;"></div>

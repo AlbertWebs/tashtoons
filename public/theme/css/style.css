@@ -816,11 +816,12 @@
 	}
 
 	.home-inner.v1 .home-fixed-text{
-		font-size:20px;
+		font-size:15px;
 		color:#d1d1d1;
 		line-height: 60px;
 		margin:0;
 		padding: 0;
+		width:65%;
 	}
 
 /* Background Slider Images  */
@@ -936,16 +937,17 @@
 /* Home Text Slider v2 */
 
 	.home-inner.v2 .text-slider .home-texts .slide{
-		font-size:70px;
-		line-height: 70px;
+		font-size:50px;
+		line-height: 50px;
 	}
 
 	.home-inner.v2 .home-fixed-text{
-		font-size:20px;
+		font-size:15px;
 		color:#d1d1d1;
-		line-height: 30px;
+		/* line-height: 10px; */
 		margin:0;
 		padding: 0;
+		width:65%;
 	}
 
 	.home-inner.v2 .text-slider .flex-direction-nav{
@@ -4958,4 +4960,9 @@ body.parallax #clients{
 	height:auto;
 }
 /*  */
+/* Set Minimum height */
+.min-height
+{
+	min-height:700px !important;
+}
 

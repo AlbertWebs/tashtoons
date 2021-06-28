@@ -1,6 +1,6 @@
 
 	<!-- What We Do Section -->
-	<section id="what-we-do" class="container soft-bg-1 animated" data-animation="fadeIn" data-animation-delay="200">
+	<section id="what-we-do" class="container soft-bg-1 min-height animated" data-animation="fadeIn" data-animation-delay="200">
 		<!-- What We Do Inner -->
 		<div class="inner">
 			<!-- Header -->

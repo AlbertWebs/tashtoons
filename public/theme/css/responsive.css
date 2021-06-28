@@ -1009,6 +1009,15 @@
 
 		}
 		/*  */
+		#home .home-elements .home-inner{
+			top:50%;
+			left:6%;
+		}
+		/*  */
+		.min-height
+		{
+			min-height:100px !important;
+		}
 	}
 /* .................... */
 
