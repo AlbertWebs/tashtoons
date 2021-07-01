@@ -7,6 +7,24 @@ use Illuminate\Http\Request;
 
 class AwardController extends Controller
 {
+
+      /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+  
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+
+     
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +32,8 @@ class AwardController extends Controller
      */
     public function index()
     {
-        //
+        $award = Award::all();
+        return view('admin.award.index', compact('award'));
     }
 
     /**
@@ -24,7 +43,7 @@ class AwardController extends Controller
      */
     public function create()
     {
-        //
+        return view('award.create');
     }
 
     /**
@@ -35,7 +54,15 @@ class AwardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $title = $request->title;
+        $content = $request->content;
+        // Process Images
+        $Award = new Award;
+        $Award->title = $title;
+        $Award->content = $content;
+        $Award->image = $image;
+        $Award->save();
+        Return Redirect::back();
     }
 
     /**
@@ -46,7 +73,7 @@ class AwardController extends Controller
      */
     public function show(Award $award)
     {
-        //
+        return view('award.show', compact('award'));
     }
 
     /**
@@ -57,7 +84,7 @@ class AwardController extends Controller
      */
     public function edit(Award $award)
     {
-        //
+        return view('award.edit', compact('award'));
     }
 
     /**
@@ -72,8 +99,6 @@ class AwardController extends Controller
         $title = $request->title;
         $content = $request->content;
         // Process Image Here
-        
-
         $updateDetails = array
         (
            'title'=>$title,
@@ -92,6 +117,7 @@ class AwardController extends Controller
      */
     public function destroy(Award $award)
     {
-        //
+        $award->delete();
+        return Redirect::back();
     }
 }
