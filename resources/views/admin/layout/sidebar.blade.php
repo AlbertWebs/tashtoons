@@ -15,7 +15,7 @@
     <!--== LEFT MENU ==-->
     <div class="sb2-13">
         <ul class="collapsible" data-collapsible="accordion">
-            <li><a href="{{url('/')}}/admin/home" class="menu-active"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
+            <li><a href="{{url('/')}}/admin" class="menu-active"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
             </li>
             <li><a target="_blank" href="{{url('/')}}/" class="menu-active"><i class="fa fa-globe" aria-hidden="true"></i> Visit Website</a>
             </li>
@@ -27,6 +27,19 @@
                         <li><a href="{{url('/')}}/admin/sliders">All Sliders</a>
                         </li>
                         <li><a href="{{url('/')}}/admin/addSlider">Add Slider Content</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            {{--  --}}
+
+               {{--  --}}
+               <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-file-image-o" aria-hidden="true"></i> Info Content  </a>
+                <div class="collapsible-body left-sub-menu">
+                    <ul>
+                        <li><a href="{{url('/')}}/admin/editAbout/about">About Us </a>
+                        </li>
+                        <li><a href="{{url('/')}}/admin/editAbout/who">Who We are</a>
                         </li>
                     </ul>
                 </div>
@@ -81,7 +94,7 @@
                     <ul>
                         <li><a href="{{url('/')}}/admin/services">All Services</a>
                         </li>
-                        <li><a href="{{url('/')}}/admin/services/create">Add Service</a>
+                        <li><a href="{{url('/')}}/admin/addService">Add Service</a>
                         </li>
                     </ul>
                 </div>

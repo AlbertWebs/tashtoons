@@ -32,7 +32,18 @@
                 </div>
             </li>
             {{--  --}}
-
+        {{--  --}}
+        <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-file-image-o" aria-hidden="true"></i> Info Content  </a>
+            <div class="collapsible-body left-sub-menu">
+                <ul>
+                    <li><a href="{{url('/')}}/admin/editAbout/about">About Us </a>
+                    </li>
+                    <li><a href="{{url('/')}}/admin/editAbout/who">Who We are</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        {{--  --}}
             {{--  --}}
             <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-file-image-o" aria-hidden="true"></i> Banners </a>
                 <div class="collapsible-body left-sub-menu">

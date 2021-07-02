@@ -12,6 +12,8 @@ use App\Models\Copyright;
 
 use App\Models\FAQ;
 
+use App\Models\About;
+
 use App\Models\How;
 
 use App\Models\Slider;
@@ -25,6 +27,8 @@ use App\Models\Message;
 use App\Models\Category;
 
 use App\Models\Testimonial;
+
+use App\Models\Service;
 
 use App\Models\Signal;
 
@@ -386,6 +390,31 @@ class AdminsController extends Controller
     public function deleteSlider($id){
         activity()->log(' Deleted Slider Number '.$id.'');
         DB::table('slider')->where('id',$id)->delete();
+        return Redirect::back();
+    }
+
+    // About
+    public function editAbout($select){
+        $About = About::all();
+        if($select == 'who'){
+            $page_title = 'formfiletext';
+            $page_name = 'Site Banner';
+            return view('admin.admin.editWhoWeAre',compact('page_title','About','page_name'));
+        }else{
+            $page_title = 'formfiletext';
+            $page_name = 'Site Banner';
+            return view('admin.admin.editAbout',compact('page_title','About','page_name'));
+        }
+    }
+    
+    public function edit_About(Request $request){
+        $updateDetails = array(
+            'about'=>$request->about,
+            'what_we_do' =>$request->what_we_do,
+            'showreel' =>$request->showreel
+        );
+        DB::table('abouts')->update($updateDetails);
+        Session::flash('message', "Changes have been saved");
         return Redirect::back();
     }
 
@@ -1478,6 +1507,108 @@ class AdminsController extends Controller
         return Redirect::back();  
     }
 
+
+    // Services
+    public function addService(){
+        activity()->log('Accessed Add Service Page');
+        $Category = DB::table('categories')->orderBy('id','DESC')->get();
+        $page_title = 'formfiletext';//For Layout Inheritance
+        $page_name = 'add Service';
+        return view('admin.service.addService',compact('page_title','page_name','Category'));
+    }
+    
+    public function add_Service(Request $request){
+        $title = $request->title;
+        $description = $request->content;
+       
+      
+      
+        $category = $request->cat;
+        $path = 'uploads/services';
+        if(isset($request->image_one)){ 
+            
+                
+                $file = $request->file('image_one');
+                $filename = str_replace(' ', '', $file->getClientOriginalName());
+                $timestamp = new Datetime();
+                $new_timestamp = $timestamp->format('Y-m-d H:i:s');
+                $image_main_temp = $new_timestamp.'image'.$filename;
+                $image_one = str_replace(' ', '',$image_main_temp);
+                $file->move($path, $image_one);
+                
+        }else{
+            $image_one = $request->pro_img_cheat;
+        }
+
+        $services = new Service; 
+        $services->title = $request->title;
+        $services->meta = $request->meta;
+        $services->slung = Str::slug($request->title);
+        $services->content = $request->content;
+        $services->author = $request->author;
+        $services->image = $image_one;
+        $services->save();   
+        Session::flash('message', "Service Has Been Added");
+        return Redirect::back();
+    }
+    
+    public function services(){
+        $Service = Service::all();
+        $page_title = 'list';
+        $page_name = 'Service';
+        return view('admin.service.services',compact('page_title','Service','page_name'));
+    }
+    
+    public function editService($id){
+        $Service = Service::find($id);
+        $page_title = 'formfiletext';
+        $page_name = 'Edit Service';
+        return view('admin.service.editService',compact('page_title','Service','page_name'));
+    }
+    
+    
+    public function edit_Service(Request $request, $id){
+       
+        $path = 'uploads/services';
+        if(isset($request->image_one)){
+          
+                
+                $file = $request->file('image_one');
+                $filename = str_replace(' ', '', $file->getClientOriginalName());
+                $timestamp = new Datetime();
+                $new_timestamp = $timestamp->format('Y-m-d H:i:s');
+                $image_main_temp = $new_timestamp.'image'.$filename;
+                $image_one = str_replace(' ', '',$image_main_temp);
+                $file->move($path, $image_one);
+                
+        }else{
+            $image_one = $request->image_one_cheat; 
+        }
+    
+     
+        
+        $updateDetails = array(
+            'title' => $request->title,
+            'slung' => Str::slug($request->title),
+            'content' => $request->content,
+            'author' => $request->author,
+           
+            'image' =>$image_one,
+           
+        );
+        DB::table('services')->where('id',$id)->update($updateDetails);
+        Session::flash('message', "Changes have been saved");
+        return Redirect::back();
+    }
+    
+    public function delete_Service($id){
+        activity()->log('Deleted Service With ID number '.$id.' ');
+        DB::table('services')->where('id',$id)->delete();
+        Session::flash('message', "Post Deleted Successfully");
+        return Redirect::back();
+    }
+
+
     
     
     // AJAX REQUESTS
@@ -1623,10 +1754,10 @@ class AdminsController extends Controller
         return response()->json(['success'=>'Deleted Successfully!']);
     }  
     
-    public function deleteSignalsAjax(Request $request){
-        activity()->log('Evoked a delete How it works Request');
+    public function deleteServiceAjax(Request $request){
+
         $id = $request->id;
-        DB::table('signals')->where('id',$id)->delete();
+        DB::table('services')->where('id',$id)->delete();
         return response()->json(['success'=>'Deleted Successfully!']);
     }   
 
