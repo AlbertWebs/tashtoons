@@ -3,7 +3,7 @@
 		<!-- Portfolio Inner -->
 		<div class="inner">
 			<!-- Header -->
-			<h1 class="header about-header white uppercase dark oswald">
+			<h1 class="header about-header white uppercase dark oswald animated" data-animation="fadeInRight" data-animation-delay="200">
 				<span id="contents">Clients</span>
 			</h1>
 			<!-- Header Strip(s) -->

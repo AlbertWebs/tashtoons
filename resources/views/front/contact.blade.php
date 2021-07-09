@@ -4,7 +4,7 @@
 		<!-- Inner -->
 		<div class="inner">
 			<!-- Header -->
-			<h1 class="header about-header white uppercase dark oswald">
+			<h1 class="header about-header white uppercase dark oswald animated" data-animation="fadeInRight" data-animation-delay="200">
 				keep in touch
 			</h1>
 			<!-- Header Strip(s) -->
@@ -75,37 +75,37 @@
                 </a>
 
                 <!-- Phone -->
-                <h1 class="phone-text oswald white">
+                <h1 class="phone-text oswald white animated" data-animation="fadeIn" data-animation-delay="200">
                     +254720000000
                 </h1>
 
                 <!-- Address -->
-                <h2 class="phone-text oswald uppercase">
+                <h2 class="phone-text oswald uppercase animated" data-animation="fadeIn" data-animation-delay="400">
                     Westlands, Street Name 6209, Nairobi Kenya
                 </h2>
 
                 <!-- E-Mail -->
-                <a href="mailto:support@goldeyestheme.com" class="mail-text uppercase oswald">
+                <a href="mailto:support@goldeyestheme.com" class="mail-text uppercase oswald animated" data-animation="fadeInRight" data-animation-delay="600">
                     support@tashtoons.com
                 </a>
 
                 <!-- Social, Facebook -->
-                <a href="#" target="_blank" class="social round dark-bg facebook">
+                <a href="#" target="_blank" class="social round dark-bg facebook animated" data-animation="fadeIn" data-animation-delay="200">
                     <i class="fa fa-facebook"></i>
                 </a>
 
                 <!-- Twitter -->
-                <a href="#" target="_blank" class="social round dark-bg twitter">
+                <a href="#" target="_blank" class="social round dark-bg twitter animated" data-animation="fadeIn" data-animation-delay="200">
                     <i class="fa fa-twitter"></i>
                 </a>
 
                 <!-- Linkedin -->
-                <a href="#" target="_blank" class="social round dark-bg linkedin">
+                <a href="#" target="_blank" class="social round dark-bg linkedin animated" data-animation="fadeIn" data-animation-delay="200">
                     <i class="fa fa-linkedin"></i>
                 </a>
 
                 <!-- YouTube -->
-                <a href="#" target="_blank" class="social round dark-bg youtube">
+                <a href="#" target="_blank" class="social round dark-bg youtube animated" data-animation="fadeIn" data-animation-delay="200">
                     <i class="fa fa-youtube"></i>
                 </a>
 

@@ -266,7 +266,7 @@ FEATURED WORKS SLIDER
 =============================================== */	
 
     $("#featured-works .works").owlCarousel({
-    	items : 4,
+    	items : 5,
     	// Responsive Settings
     	itemsDesktop : [1169,4],
 		itemsDesktopSmall : [1100,3],
@@ -274,8 +274,8 @@ FEATURED WORKS SLIDER
 		itemsMobile : [640,1],
 		// End Responsive Settings
 		pagination : false,
-		navigation : true,
-		mouseDrag : false,
+		navigation : false,
+		mouseDrag : true,
     	stopOnHover : true,
     	slideSpeed : 700,
     	paginationSpeed : 900,

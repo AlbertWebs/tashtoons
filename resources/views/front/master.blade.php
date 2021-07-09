@@ -143,6 +143,15 @@
 
 	<!-- JS Files -->
 	<script type="text/javascript" src="{{asset('theme/js/jquery-1.11.0.min.js')}}"></script>
+	<script>
+		// A $( document ).ready() block.
+		$( document ).ready(function() {
+			$('.extra-showreel').hide();
+			$("#reveal").click(function(){
+				$('.extra-showreel').show();
+			});
+		});
+	</script>
 	<script type="text/javascript" src="{{asset('theme/js/bootstrap.min.js')}}"></script>
 	<script type="text/javascript" src="{{asset('theme/js/jquery.appear.js')}}"></script>
 	<script type="text/javascript" src="{{asset('theme/js/waypoints.min.js')}}"></script>
@@ -177,6 +186,8 @@
 		});
 
 	</script>
+
+
 
 </body>
 </html>
