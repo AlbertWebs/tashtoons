@@ -93,8 +93,27 @@ Route::post('add_Slider', [AdminsController::class, 'add_Slider'])->middleware('
 Route::get('editSlider/{id}', [AdminsController::class, 'editSlider'])->middleware('is_admin');
 Route::post('edit_Slider/{id}', [AdminsController::class, 'edit_Slider'])->middleware('is_admin');
 Route::get('deleteSlider/{id}', [AdminsController::class, 'deleteSlider'])->middleware('is_admin');
-
-
+// Awards
+Route::get('awards', [AdminsController::class, 'Award'])->middleware('is_admin');
+Route::get('addAward', [AdminsController::class, 'addAward'])->middleware('is_admin');
+Route::post('add_Award', [AdminsController::class, 'add_Award'])->middleware('is_admin');
+Route::get('editAward/{id}', [AdminsController::class, 'editAward'])->middleware('is_admin');
+Route::post('edit_Award/{id}', [AdminsController::class, 'edit_Award'])->middleware('is_admin');
+Route::get('deleteAward/{id}', [AdminsController::class, 'deleteAward'])->middleware('is_admin');
+// Clients
+Route::get('clients', [AdminsController::class, 'client'])->middleware('is_admin');
+Route::get('addClient', [AdminsController::class, 'addClient'])->middleware('is_admin');
+Route::post('add_Client', [AdminsController::class, 'add_Client'])->middleware('is_admin');
+Route::get('editClient/{id}', [AdminsController::class, 'editClient'])->middleware('is_admin');
+Route::post('edit_Client/{id}', [AdminsController::class, 'edit_Client'])->middleware('is_admin');
+Route::get('deleteClient/{id}', [AdminsController::class, 'deleteClient'])->middleware('is_admin');
+// Gallery
+Route::get('gallery', [AdminsController::class, 'gallery'])->middleware('is_admin');
+Route::get('addGallery', [AdminsController::class, 'addGallery'])->middleware('is_admin');
+Route::post('add_Gallery', [AdminsController::class, 'add_Gallery'])->middleware('is_admin');
+Route::get('editGallery/{id}', [AdminsController::class, 'editGallery'])->middleware('is_admin');
+Route::post('edit_Gallery/{id}', [AdminsController::class, 'edit_Gallery'])->middleware('is_admin');
+Route::get('deleteGallery/{id}', [AdminsController::class, 'deleteGallery'])->middleware('is_admin');
 
 // AJAX REQUESTS
 Route::post('addCategoryAjaxRequest', [AdminsController::class, 'addCategoryAjaxRequest'])->middleware('is_admin');

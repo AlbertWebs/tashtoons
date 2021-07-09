@@ -799,7 +799,7 @@
 
 	#home .home-elements .home-inner{
 		position: relative;
-		top:80%;
+		top:89%;
 		left:6%;
 		height: auto;
 		width:100%;
@@ -937,8 +937,8 @@
 /* Home Text Slider v2 */
 
 	.home-inner.v2 .text-slider .home-texts .slide{
-		font-size:50px;
-		line-height: 50px;
+		font-size:40px;
+		line-height: 40px;
 	}
 
 	.home-inner.v2 .home-fixed-text{
@@ -4964,5 +4964,19 @@ body.parallax #clients{
 .min-height
 {
 	min-height:700px !important;
+}
+
+#myVideo {
+  position: absolute;
+  top:0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  filter:opacity(70%);
+  /*  */
+  width: 100%; 
+  height: auto; 
+  background-size: cover;
+  overflow: hidden;
 }
 

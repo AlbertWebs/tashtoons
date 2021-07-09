@@ -962,6 +962,94 @@ class AdminsController extends Controller
         return Redirect::back();
     }
 
+    // Awards
+
+    public function addAward(){
+        $page_title = 'formfiletext';//For Layout Inheritance
+        $page_name = 'add Award';
+        return view('admin.admin.addAward',compact('page_title','page_name'));
+    }
+    
+    public function add_Award(Request $request){
+        
+        $title = $request->title;
+        $description = $request->content;
+       
+      
+      
+        $category = $request->cat;
+        $path = 'uploads/awards';
+        if(isset($request->image_one)){ 
+            
+                
+                $file = $request->file('image_one');
+                $filename = str_replace(' ', '', $file->getClientOriginalName());
+                $timestamp = new Datetime();
+                $new_timestamp = $timestamp->format('Y-m-d H:i:s');
+                $image_main_temp = $new_timestamp.'image'.$filename;
+                $image_one = str_replace(' ', '',$image_main_temp);
+                $file->move($path, $image_one);
+                
+        }else{
+            $image_one = $request->pro_img_cheat;
+        }
+
+        $awards = new Award; 
+        $awards->title = $request->title;
+        $awards->content = $request->content;
+        $awards->image_one = $image_one;
+        $awards->save();
+        Session::flash('message', "Post Saved Successfully");
+        return Redirect::back();
+    }
+    
+    public function awards(){
+        $Award = Award::all();
+        $page_title = 'list';
+        $page_name = 'Award';
+        return view('admin.admin.awards',compact('page_title','Award','page_name'));
+    }
+    
+    public function editAward($id){
+        $Award = Award::find($id);
+        $page_title = 'formfiletext';
+        $page_name = 'Edit Award';
+        return view('admin.admin.editAward',compact('page_title','Award','page_name'));
+    }
+    
+    
+    public function edit_Award(Request $request, $id){
+        $path = 'uploads/awards';
+        if(isset($request->image_one)){
+                $file = $request->file('image_one');
+                $filename = str_replace(' ', '', $file->getClientOriginalName());
+                $timestamp = new Datetime();
+                $new_timestamp = $timestamp->format('Y-m-d H:i:s');
+                $image_main_temp = $new_timestamp.'image'.$filename;
+                $image_one = str_replace(' ', '',$image_main_temp);
+                $file->move($path, $image_one);
+                
+        }else{
+            $image_one = $request->image_one_cheat; 
+        }
+            
+        $updateDetails = array(
+            'title' => $request->title,
+            'content' => $request->content,
+            'image_one' =>$image_one,
+        );
+        DB::table('awards')->where('id',$id)->update($updateDetails);
+        Session::flash('message', "Changes have been saved");
+        return Redirect::back();
+    }
+    
+    public function delete_Award($id){
+        DB::table('awards')->where('id',$id)->delete();
+        Session::flash('message', "Post Deleted Successfully");
+        return Redirect::back();
+    }
+    // 
+
     public function b2b(){
         activity()->log('Accessed The B2B Table ');
         $B2B = DB::table('b2b_api_response')->get();
