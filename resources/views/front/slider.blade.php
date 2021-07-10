@@ -15,7 +15,7 @@
         <!-- End Video -->
 
         <!-- Home Elements v2 -->
-        <div class="home-elements animated" data-animation="fadeInLeft" data-animation-delay="8000">
+        <div class="home-elements animated" data-animation="fadeInLeft" data-animation-delay="9000" data-animation-duration="8000">
             <!-- Home Inner -->
             <div class="home-inner v2 t-left">
                 

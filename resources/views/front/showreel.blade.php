@@ -19,126 +19,48 @@
 
         <!-- Works -->
         <div class="works white" style="padding:0px !important">
-
+            {{-- Iterations Starts here --}}
+            <?php $Video = DB::table('videos')->limit('10')->get(); ?>
+            @foreach($Video as $Vid)
             <!-- Item -->
             <div class="item">
              <!-- Item Link -->
                     <a href="https://vimeo.com/manage/videos/572640847" class="video-link mp-video" class="work-image">
 						<!-- Item Image -->
-						<img src="{{asset('theme/images/portfolio/004.jpg')}}" alt="" />
+                        <?php
+                            $imgid = $Vid->link;
+
+                            $hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$imgid.php"));
+
+                          
+
+                            $thumbnail =  $hash[0]['thumbnail_large'];
+                            $title =  $hash[0]['title'];
+                            $description =  $hash[0]['description'];
+                            
+                        ?>  
+						<img class="img-thumbnail" src="{{$thumbnail}}" alt="" />
 					</a>
+
+
 
                     <!-- Texts -->
                     <div class="texts">
                         <!-- Item Header -->
                         <h1 class="f-head oswald normal uppercase">
-                            girl on park
+                            {{$title}}
                         </h1>
 
                         <!-- Item Description -->
                         <h2 class="f-text open-sans normal">
-                            Design, Photography
+                            {{$description}}
                         </h2>
                     </div>
                 <!-- End Texts -->
             </div>
             <!-- End Item -->
+            @endforeach
 
-            <!-- Item -->
-            <div class="item">
-                <!-- Item Link -->
-                       <a href="https://vimeo.com/manage/videos/572640847" class="video-link mp-video" class="work-image">
-                           <!-- Item Image -->
-                           <img src="{{asset('theme/images/portfolio/004.jpg')}}" alt="" />
-                       </a>
-   
-                       <!-- Texts -->
-                       <div class="texts">
-                           <!-- Item Header -->
-                           <h1 class="f-head oswald normal uppercase">
-                               girl on park
-                           </h1>
-   
-                           <!-- Item Description -->
-                           <h2 class="f-text open-sans normal">
-                               Design, Photography
-                           </h2>
-                       </div>
-                   <!-- End Texts -->
-               </div>
-               <!-- End Item -->
-
-               <!-- Item -->
-            <div class="item">
-                <!-- Item Link -->
-                        <a href="https://vimeo.com/manage/videos/572640847" class="video-link mp-video" class="work-image">
-                           <!-- Item Image -->
-                           <img src="{{asset('theme/images/portfolio/004.jpg')}}" alt="" />
-                       </a>
-   
-                       <!-- Texts -->
-                       <div class="texts">
-                           <!-- Item Header -->
-                           <h1 class="f-head oswald normal uppercase">
-                               girl on park
-                           </h1>
-   
-                           <!-- Item Description -->
-                           <h2 class="f-text open-sans normal">
-                               Design, Photography
-                           </h2>
-                       </div>
-                   <!-- End Texts -->
-               </div>
-               <!-- End Item -->
-
-               <!-- Item -->
-            <div class="item">
-                <!-- Item Link -->
-                        <a href="https://vimeo.com/manage/videos/572640847" class="video-link mp-video" class="work-image">
-                           <!-- Item Image -->
-                           <img src="{{asset('theme/images/portfolio/004.jpg')}}" alt="" />
-                       </a>
-   
-                       <!-- Texts -->
-                       <div class="texts">
-                           <!-- Item Header -->
-                           <h1 class="f-head oswald normal uppercase">
-                               girl on park
-                           </h1>
-   
-                           <!-- Item Description -->
-                           <h2 class="f-text open-sans normal">
-                               Design, Photography
-                           </h2>
-                       </div>
-                   <!-- End Texts -->
-               </div>
-               <!-- End Item -->
-
-               <!-- Item -->
-            <div class="item">
-                <!-- Item Link -->
-                       <a href="https://vimeo.com/manage/videos/572640847" class="video-link mp-video" class="work-image">
-                           <!-- Item Image -->
-                           <img src="{{asset('theme/images/portfolio/004.jpg')}}" alt="" />
-                       </a>
-   
-                       <!-- Texts -->
-                       <div class="texts">
-                           <!-- Item Header -->
-                           <h1 class="f-head oswald normal uppercase">
-                               girl on park
-                           </h1>
-   
-                           <!-- Item Description -->
-                           <h2 class="f-text open-sans normal">
-                               Design, Photography
-                           </h2>
-                       </div>
-                   <!-- End Texts -->
-               </div>
-               <!-- End Item -->
 
         </div><!-- End Works -->
 

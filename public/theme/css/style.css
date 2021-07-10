@@ -4984,3 +4984,9 @@ body.parallax #clients{
 	color:#ffffff;
 	
 }
+
+
+.img-thumbnail{
+	max-width: 100%;
+    max-height: 100%;
+}
