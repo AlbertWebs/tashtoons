@@ -18,12 +18,19 @@
         <!-- Portfolio Items -->
         <div class="portfolio-items t-center isotope" style="position: relative; overflow: hidden; height: 744px;">
 
+            <?php $Video = DB::table('videos')->inRandomOrder()->limit('10')->get(); ?>
+            @foreach($Video as $Vid)
             <!-- Item -->
             <div class="item five branding isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
+                <?php
+                    $imgid = $Vid->link;
+                    $hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$imgid.php"));
+                    $thumbnail =  $hash[0]['thumbnail_large'];
+                ?>  
                 <!-- Item Link -->
-                <a href="{{asset('theme/images/project/02.jpg')}}" data-rel="prettyPhoto[portfolio]" class="work-image">
+                <a href="{{$thumbnail}}" data-rel="prettyPhoto[portfolio]" class="work-image gallery-thumbnail">
                     <!-- Item Image -->
-                    <img src="{{asset('theme/images/portfolio/001.jpg')}}" alt="">
+                    <img class="img-thumbnail" src="{{$thumbnail}}" alt="">
                     <!-- Item Details -->
                     <div class="item-details">
                         <!-- Item Header -->
@@ -37,206 +44,9 @@
                 <!-- End Item Link -->
             </div>
             <!-- End Item -->
+            @endforeach
 
-
-            <!-- Item -->
-            <div class="item five branding isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-                <!-- Item Link -->
-                <a href="{{asset('theme/images/project/02.jpg')}}" data-rel="prettyPhoto[portfolio]" class="work-image">
-                    <!-- Item Image -->
-                    <img src="{{asset('theme/images/portfolio/001.jpg')}}" alt="">
-                    <!-- Item Details -->
-                    <div class="item-details">
-                        <!-- Item Header -->
-                        <h1 class="oswald uppercase white">
-                            {{-- Red &amp; Dark --}}
-                        </h1>
-                    
-                    </div>
-                    <!-- End Item Details -->
-                </a>
-                <!-- End Item Link -->
-            </div>
-            <!-- End Item -->
-
-
-
-            <!-- Item -->
-            <div class="item five branding isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-                <!-- Item Link -->
-                <a href="{{asset('theme/images/project/02.jpg')}}" data-rel="prettyPhoto[portfolio]" class="work-image">
-                    <!-- Item Image -->
-                    <img src="{{asset('theme/images/portfolio/001.jpg')}}" alt="">
-                    <!-- Item Details -->
-                    <div class="item-details">
-                        <!-- Item Header -->
-                        <h1 class="oswald uppercase white">
-                            {{-- Red &amp; Dark --}}
-                        </h1>
-                    
-                    </div>
-                    <!-- End Item Details -->
-                </a>
-                <!-- End Item Link -->
-            </div>
-            <!-- End Item -->
-
-
-
-            <!-- Item -->
-            <div class="item five branding isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-                <!-- Item Link -->
-                <a href="{{asset('theme/images/project/02.jpg')}}" data-rel="prettyPhoto[portfolio]" class="work-image">
-                    <!-- Item Image -->
-                    <img src="{{asset('theme/images/portfolio/001.jpg')}}" alt="">
-                    <!-- Item Details -->
-                    <div class="item-details">
-                        <!-- Item Header -->
-                        <h1 class="oswald uppercase white">
-                            {{-- Red &amp; Dark --}}
-                        </h1>
-                    
-                    </div>
-                    <!-- End Item Details -->
-                </a>
-                <!-- End Item Link -->
-            </div>
-            <!-- End Item -->
-
-
-
-            <!-- Item -->
-            <div class="item five branding isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-                <!-- Item Link -->
-                <a href="{{asset('theme/images/project/02.jpg')}}" data-rel="prettyPhoto[portfolio]" class="work-image">
-                    <!-- Item Image -->
-                    <img src="{{asset('theme/images/portfolio/001.jpg')}}" alt="">
-                    <!-- Item Details -->
-                    <div class="item-details">
-                        <!-- Item Header -->
-                        <h1 class="oswald uppercase white">
-                            {{-- Red &amp; Dark --}}
-                        </h1>
-                    
-                    </div>
-                    <!-- End Item Details -->
-                </a>
-                <!-- End Item Link -->
-            </div>
-            <!-- End Item -->
-
-
-
-            <!-- Item -->
-            <div class="item five branding isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-                <!-- Item Link -->
-                <a href="{{asset('theme/images/project/02.jpg')}}" data-rel="prettyPhoto[portfolio]" class="work-image">
-                    <!-- Item Image -->
-                    <img src="{{asset('theme/images/portfolio/001.jpg')}}" alt="">
-                    <!-- Item Details -->
-                    <div class="item-details">
-                        <!-- Item Header -->
-                        <h1 class="oswald uppercase white">
-                            {{-- Red &amp; Dark --}}
-                        </h1>
-                    
-                    </div>
-                    <!-- End Item Details -->
-                </a>
-                <!-- End Item Link -->
-            </div>
-            <!-- End Item -->
-
-
-
-            <!-- Item -->
-            <div class="item five branding isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-                <!-- Item Link -->
-                <a href="{{asset('theme/images/project/02.jpg')}}" data-rel="prettyPhoto[portfolio]" class="work-image">
-                    <!-- Item Image -->
-                    <img src="{{asset('theme/images/portfolio/001.jpg')}}" alt="">
-                    <!-- Item Details -->
-                    <div class="item-details">
-                        <!-- Item Header -->
-                        <h1 class="oswald uppercase white">
-                            {{-- Red &amp; Dark --}}
-                        </h1>
-                    
-                    </div>
-                    <!-- End Item Details -->
-                </a>
-                <!-- End Item Link -->
-            </div>
-            <!-- End Item -->
-
-
-
-            <!-- Item -->
-            <div class="item five branding isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-                <!-- Item Link -->
-                <a href="{{asset('theme/images/project/02.jpg')}}" data-rel="prettyPhoto[portfolio]" class="work-image">
-                    <!-- Item Image -->
-                    <img src="{{asset('theme/images/portfolio/001.jpg')}}" alt="">
-                    <!-- Item Details -->
-                    <div class="item-details">
-                        <!-- Item Header -->
-                        <h1 class="oswald uppercase white">
-                            {{-- Red &amp; Dark --}}
-                        </h1>
-                    
-                    </div>
-                    <!-- End Item Details -->
-                </a>
-                <!-- End Item Link -->
-            </div>
-            <!-- End Item -->
-
-
-
-            <!-- Item -->
-            <div class="item five branding isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-                <!-- Item Link -->
-                <a href="{{asset('theme/images/project/02.jpg')}}" data-rel="prettyPhoto[portfolio]" class="work-image">
-                    <!-- Item Image -->
-                    <img src="{{asset('theme/images/portfolio/001.jpg')}}" alt="">
-                    <!-- Item Details -->
-                    <div class="item-details">
-                        <!-- Item Header -->
-                        <h1 class="oswald uppercase white">
-                            {{-- Red &amp; Dark --}}
-                        </h1>
-                    
-                    </div>
-                    <!-- End Item Details -->
-                </a>
-                <!-- End Item Link -->
-            </div>
-            <!-- End Item -->
-
-
-
-            <!-- Item -->
-            <div class="item five branding isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-                <!-- Item Link -->
-                <a href="{{asset('theme/images/project/02.jpg')}}" data-rel="prettyPhoto[portfolio]" class="work-image">
-                    <!-- Item Image -->
-                    <img src="{{asset('theme/images/portfolio/001.jpg')}}" alt="">
-                    <!-- Item Details -->
-                    <div class="item-details">
-                        <!-- Item Header -->
-                        <h1 class="oswald uppercase white">
-                            {{-- Red &amp; Dark --}}
-                        </h1>
-                    
-                    </div>
-                    <!-- End Item Details -->
-                </a>
-                <!-- End Item Link -->
-            </div>
-            <!-- End Item -->
-
-
-            
+        
 
             
             

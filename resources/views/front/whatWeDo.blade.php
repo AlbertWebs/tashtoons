@@ -1,6 +1,8 @@
 
 	<!-- What We Do Section -->
 	<section id="what-we-do" class="container soft-bg-1 min-height animated" data-animation="fadeIn" data-animation-delay="200">
+		<?php $About = DB::table('abouts')->get(); ?>
+		@foreach ($About as $about)
 		<!-- What We Do Inner -->
 		<div class="inner">
 			<!-- Header -->
@@ -11,7 +13,8 @@
 			{{-- <div class="header-strips-one"></div> --}}
 			<!-- Header Description -->
 			<h2 class="description white about-text animated" data-animation="fadeInRight" data-animation-delay="400">
-				Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in piece of classical. There are many variations of passages of Lorem Ipsum available.
+				{!! html_entity_decode($about->what_we_do, ENT_QUOTES, 'UTF-8') !!}
 			</h2>
 		</div><!-- End What We Do Inner -->
+		@endforeach
 	</section><!-- End What We Do Section -->
