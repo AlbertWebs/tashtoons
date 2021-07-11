@@ -1035,6 +1035,10 @@
 			height:100vh;
 			object-fit: cover;
 		}
+
+		.img-thumbnail{
+			height:auto;
+		}
 	}
 /* .................... */
 

@@ -39,7 +39,7 @@
                             $description =  $hash[0]['description'];
                             
                         ?>  
-						<img class="img-thumbnail" src="{{$thumbnail}}" alt="" />
+						<img class="img-thumbnail pattern-black" src="{{$thumbnail}}" alt="" />
 					</a>
 
 
