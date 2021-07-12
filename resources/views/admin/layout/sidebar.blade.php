@@ -33,6 +33,32 @@
             </li>
             {{--  --}}
 
+            {{--  --}}
+            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-suitcase" aria-hidden="true"></i> List of Clients  </a>
+                <div class="collapsible-body left-sub-menu">
+                    <ul>
+                        <li><a href="{{url('/')}}/admin/addClient">Add Clients</a>
+                        </li>
+                        <li><a href="{{url('/')}}/admin/clients">Our Clients</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            {{--  --}}
+
+             {{--  --}}
+             <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-gift" aria-hidden="true"></i> Awards  </a>
+                <div class="collapsible-body left-sub-menu">
+                    <ul>
+                        <li><a href="{{url('/')}}/admin/addAward">Add Award</a>
+                        </li>
+                        <li><a href="{{url('/')}}/admin/awards">Our Awards</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            {{--  --}}
+
                {{--  --}}
                <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-pencil" aria-hidden="true"></i> Info Content  </a>
                 <div class="collapsible-body left-sub-menu">
@@ -41,6 +67,7 @@
                         </li>
                         <li><a href="{{url('/')}}/admin/editAbout/who">Who We are</a>
                         </li>
+                       
                     </ul>
                 </div>
             </li>

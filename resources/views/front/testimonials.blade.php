@@ -4,7 +4,7 @@
 		<!-- Pattern For Video -->
 		<div class="fullscreen soft-bg-1 absolute pattern-black"></div>
 		<!-- Video -->
-		<div id="P2" class="player video-container" data-property="{videoURL:'mSLAF_DjiDU',containment:'#video',autoPlay:true, showControls:false, mute:true, startAt:0, opacity:1}"></div>
+		<div id="P2" class="player video-container" data-property="{videoURL:'XgOov36UzjQ',containment:'#video',autoPlay:true, showControls:false, mute:true, startAt:0, opacity:1}"></div>
 		<!-- End Video -->
 
 		<!-- Arrow -->
@@ -17,44 +17,20 @@
 
 		<!-- Text Slider -->
 		<ul class="text-slider clearfix">
-
-			<!-- Slide -->
+            <?php $Testimonials = DB::table('testimonials')->get(); ?>
+			@foreach ($Testimonials as $testimonial)
+				<!-- Slide -->
 			<li class="text normal">
 				<!-- Quote -->
 				<h1 class="white">
-					Informed decision-making comes from a long tradition of guessing and then blaming <span class="colored bold"> others</span> for inadequate results.
+					{!! html_entity_decode($testimonial->content, ENT_QUOTES, 'UTF-8') !!}
 				</h1>
 				<!-- Author -->
 				<p class="author uppercase">
-					scott adams
+					{{$testimonial->name}}
 				</p>
 			</li>
 			<!-- End Slide -->
-
-			<!-- Slide -->
-			<li class="text normal">
-				<!-- Quote -->
-				<h1 class="white">
-					Engineers like to solve problems. If there are <span class="colored bold"> no problems </span> handily available, they will create their own problems.
-				</h1>
-				<!-- Author -->
-				<p class="author uppercase">
-					scott adams
-				</p>
-			</li>
-			<!-- End Slide -->
-
-			<!-- Slide -->
-			<li class="text normal">
-				<!-- Quote -->
-				<h1 class="white">
-					Remind people that profit is the difference between <span class="colored bold">revenue and expense.</span> This makes you look smart.
-				</h1>
-				<!-- Author -->
-				<p class="author uppercase">
-					scott adams
-				</p>
-			</li>
-			<!-- End Slide -->
+			@endforeach
 		</ul><!-- End Text Slider -->
 	</section><!-- End Testimonials -->

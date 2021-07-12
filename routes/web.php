@@ -10,6 +10,8 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AwardController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ContactUsFormController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +25,9 @@ use App\Http\Controllers\GalleryController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::POST('/send-message', [HomeController::class, 'send_message'])->name('send');
+// Route::get('/contact', [ContactUsFormController::class, 'createForm']);
+
+Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
 
 
 
@@ -33,12 +38,12 @@ Route::group(['prefix'=>'admin'], function(){
 Route::get('/', [AwardController::class, 'index'])->name('admin.home')->middleware('is_admin');
 
 // Awards
-Route::get('/awards', [AwardController::class, 'index'])->name('awards-create')->middleware('is_admin');
-Route::post('/awards/store', [AwardController::class, 'store'])->name('awards-store')->middleware('is_admin');
-Route::get('/awards/show', [AwardController::class, 'show'])->name('awards-show')->middleware('is_admin');
-Route::get('/awards/edit', [AwardController::class, 'edit'])->name('awards-edit')->middleware('is_admin');
-Route::post('/awards/update', [AwardController::class, 'update'])->name('awards-update')->middleware('is_admin');
-Route::get('/awards/destroy', [AwardController::class, 'destroy'])->name('awards-destroy')->middleware('is_admin');
+// Route::get('/awards', [AwardController::class, 'index'])->name('awards-create')->middleware('is_admin');
+// Route::post('/awards/store', [AwardController::class, 'store'])->name('awards-store')->middleware('is_admin');
+// Route::get('/awards/show', [AwardController::class, 'show'])->name('awards-show')->middleware('is_admin');
+// Route::get('/awards/edit', [AwardController::class, 'edit'])->name('awards-edit')->middleware('is_admin');
+// Route::post('/awards/update', [AwardController::class, 'update'])->name('awards-update')->middleware('is_admin');
+// Route::get('/awards/destroy', [AwardController::class, 'destroy'])->name('awards-destroy')->middleware('is_admin');
 
 
 /* ...........................................######################............................................. */
@@ -55,6 +60,13 @@ Route::post('add_Blog', [AdminsController::class, 'add_Blog'])->middleware('is_a
 Route::get('editBlog/{id}', [AdminsController::class, 'editBlog'])->middleware('is_admin');
 Route::post('edit_Blog/{id}', [AdminsController::class, 'edit_Blog'])->middleware('is_admin');
 Route::get('delete_Blog/{id}', [AdminsController::class, 'delete_Blog'])->middleware('is_admin');
+// Client
+Route::get('clients', [AdminsController::class, 'clients'])->middleware('is_admin');
+Route::get('addClient', [AdminsController::class, 'addClient'])->middleware('is_admin');
+Route::post('add_Client', [AdminsController::class, 'add_Client'])->middleware('is_admin');
+Route::get('editClient/{id}', [AdminsController::class, 'editClient'])->middleware('is_admin');
+Route::post('edit_Client/{id}', [AdminsController::class, 'edit_Client'])->middleware('is_admin');
+Route::get('delete_Client/{id}', [AdminsController::class, 'delete_Client'])->middleware('is_admin');
 // Services
 Route::get('services', [AdminsController::class, 'services'])->middleware('is_admin');
 Route::get('addService', [AdminsController::class, 'addService'])->middleware('is_admin');
@@ -94,7 +106,7 @@ Route::get('editSlider/{id}', [AdminsController::class, 'editSlider'])->middlewa
 Route::post('edit_Slider/{id}', [AdminsController::class, 'edit_Slider'])->middleware('is_admin');
 Route::get('deleteSlider/{id}', [AdminsController::class, 'deleteSlider'])->middleware('is_admin');
 // Awards
-Route::get('awards', [AdminsController::class, 'Award'])->middleware('is_admin');
+Route::get('awards', [AdminsController::class, 'awards'])->middleware('is_admin');
 Route::get('addAward', [AdminsController::class, 'addAward'])->middleware('is_admin');
 Route::post('add_Award', [AdminsController::class, 'add_Award'])->middleware('is_admin');
 Route::get('editAward/{id}', [AdminsController::class, 'editAward'])->middleware('is_admin');
@@ -140,6 +152,10 @@ Route::post('deleteHowAjax', [AdminsController::class, 'deleteHowAjax'])->middle
 Route::post('deleteCoursesAjax', [AdminsController::class, 'deleteCoursesAjax'])->middleware('is_admin');
 Route::post('deleteTopicsAjax', [AdminsController::class, 'deleteTopicsAjax'])->middleware('is_admin');
 Route::post('deleteServiceAjax', [AdminsController::class, 'deleteServiceAjax'])->middleware('is_admin');
+Route::post('deleteClientAjax', [AdminsController::class, 'deleteClientAjax'])->middleware('is_admin');
+Route::post('deleteAwardAjax', [AdminsController::class, 'deleteAwardAjax'])->middleware('is_admin');
+
+
 
 
 });

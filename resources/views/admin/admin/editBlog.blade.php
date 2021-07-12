@@ -15,7 +15,7 @@
 <!--== BODY CONTNAINER ==-->
  <div class="container-fluid sb2">
     <div class="row">
-        @include('admin.sidebar')
+        @include('admin.layouts.sidebar')
 
         <!--== BODY INNER CONTAINER ==-->
         

@@ -2804,11 +2804,11 @@ body.parallax #clients{
 	#featured-works .works .item h1.f-head{
 		position: relative;
 		z-index: 2;
-		font-size:30px;
+		font-size:20px;
 		padding:0;
-		margin:30px 0 0 30px;
+		margin:20px 0 0 20px;
 		text-shadow:2px 0px 2px rgba(0,0,0,0.2);
-		opacity: 0.7;
+		opacity: 0.8;
 		-webkit-transition: all 0.8s;
 		-moz-transition: all 0.8s;
 		transition: all 0.8s;
@@ -5001,6 +5001,17 @@ body.parallax #clients{
 	max-width: 100%;
     max-height: 100%;
 	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
+	/* top: 50%; */
+	/* transform: translateY(-50%); */
+}
+
+.containerss{
+	width:685px !important;
+	height:378px !important;
+}
+
+.containerss img{
+	max-width: 100%;
+    max-height: 100%;
+	
 }

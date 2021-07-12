@@ -344,7 +344,7 @@
 		/* Portfolio */
 		#portfolio .portfolio .portfolio-items div.boxed-item,
 		#portfolio .portfolio .portfolio-items div.item{
-			width: 50%;
+			width: 100%;
 		}
 
 		.video-part div.left-video,
@@ -1038,6 +1038,16 @@
 
 		.img-thumbnail{
 			height:auto;
+		}
+
+		.containerss{
+			width:auto !important;
+			height:auto !important;
+		}
+
+		.gallery-thumbnail{
+			width:100% !important;
+			height:100% !important;
 		}
 	}
 /* .................... */

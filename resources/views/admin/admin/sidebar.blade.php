@@ -15,7 +15,7 @@
     <!--== LEFT MENU ==-->
     <div class="sb2-13">
         <ul class="collapsible" data-collapsible="accordion">
-            <li><a href="{{url('/')}}/admin/home" class="menu-active"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
+            <li><a href="{{url('/')}}/admin" class="menu-active"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
             </li>
             <li><a target="_blank" href="{{url('/')}}/" class="menu-active"><i class="fa fa-globe" aria-hidden="true"></i> Visit Website</a>
             </li>

@@ -20,12 +20,10 @@
 			<div class="inner remove-padding">
 				<div class="row">			
 					<div class="carousel-client">
-						<div class="slide"><img src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/slider-logo1.png"></div>
-						<div class="slide"><img src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/slider-logo2.png"></div>
-						<div class="slide"><img src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/slider-logo3.png"></div>
-						<div class="slide"><img src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/slider-logo1.png"></div>
-						<div class="slide"><img src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/slider-logo2.png"></div>
-						<div class="slide"><img src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/slider-logo3.png"></div>
+						<?php $Clients = DB::table('clients')->get(); ?>
+						@foreach ($Clients as $item)
+						<div class="slide"><img src="{{url('/')}}/uploads/clients/{{$item->image}}"></div>
+						@endforeach
 					</div>
 				</div>
 			</div>

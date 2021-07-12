@@ -1,3 +1,5 @@
+	<?php $SiteSettings = DB::table('site_settings')->get(); ?>
+	@foreach ($SiteSettings as $Settings)
 	<!-- Keep In Touch -->
 	<section id="contact" class="container">
 
@@ -14,30 +16,61 @@
 			<!-- Contact -->
 			<div class="contact animated" data-animation="fadeIn" data-animation-delay="200">
 				<!-- Contact Form -->
-				<form id="contact-form" name="cform" class="clearfix" method="post" action="#">
+				<form id="contact-fosrm" name="cform" class="clearfix" method="post" action="{{ route('contact.store') }}">
+					@csrf
 					<!-- Left Inputs -->
 					<div class="col-xs-6 left">
 
 						<!-- Name -->
 						<span class="name-missing">Please enter your name</span>
 						<input type="text" name="name" id="name" class="form dark-form oswald light" placeholder="NAME" />
+						<!-- Error -->
+						@if ($errors->has('name'))
+						<div class="error">
+							{{ $errors->first('name') }}
+						</div>
+						@endif
 
 						<!-- Email -->
 						<span class="email-missing">Please enter your E-mail</span>
 						<input type="text" name="email" id="email" class="form dark-form oswald light" placeholder="E-MAIL" />
+						@if ($errors->has('email'))
+						<div class="error">
+							{{ $errors->first('email') }}
+						</div>
+						@endif
 
 						<!-- Subject -->
 						<span class="subject-missing">Please enter Subject</span>
 						<input type="text" name="subject" id="subject" class="form dark-form oswald light" placeholder="SUBJECT" />
+						@if ($errors->has('subject'))
+						<div class="error">
+							{{ $errors->first('subject') }}
+						</div>
+						@endif
 
 					</div>
 					<!-- End Left Inputs -->
 					<!-- Right Text Area -->
 					<div class="col-xs-6 right">
+						<!-- Name -->
+						<span class="name-missing">Please enter your phone number</span>
+						<input type="text" name="phone" id="name" class="form dark-form oswald light" placeholder="Phone Number" />
+						@if ($errors->has('phone'))
+						<div class="error">
+							{{ $errors->first('phone') }}
+						</div>
+						@endif
+
 
 						<!-- Message -->
 						<span class="message-missing">Please enter your Message</span>
 						<textarea name="message" id="message" class="form dark-form textarea oswald light" placeholder="YOUR MESSAGE"></textarea>
+						@if ($errors->has('message'))
+						<div class="error">
+							{{ $errors->first('message') }}
+						</div>
+						@endif
 
 					</div>
 					<!-- End Right Text Area -->
@@ -76,45 +109,47 @@
 
                 <!-- Phone -->
                 <h1 class="phone-text oswald white animated" data-animation="fadeIn" data-animation-delay="200">
-                    +254720000000
+                    {{$Settings->mobile_one}}
                 </h1>
 
                 <!-- Address -->
                 <h2 class="phone-text oswald uppercase animated" data-animation="fadeIn" data-animation-delay="400">
-                    Westlands, Street Name 6209, Nairobi Kenya
+                    {{$Settings->location}}
                 </h2>
 
                 <!-- E-Mail -->
-                <a href="mailto:support@goldeyestheme.com" class="mail-text uppercase oswald animated" data-animation="fadeInRight" data-animation-delay="600">
-                    support@tashtoons.com
+                <a href="mailto:{{$Settings->email}}" class="mail-text uppercase oswald animated" data-animation="fadeInRight" data-animation-delay="600">
+                    {{$Settings->email}}
                 </a>
 
                 <!-- Social, Facebook -->
-                <a href="#" target="_blank" class="social round dark-bg facebook animated" data-animation="fadeIn" data-animation-delay="200">
+                <a href="{{$Settings->facebook}}" target="_blank" class="social round dark-bg facebook animated" data-animation="fadeIn" data-animation-delay="200">
                     <i class="fa fa-facebook"></i>
                 </a>
 
                 <!-- Twitter -->
-                <a href="#" target="_blank" class="social round dark-bg twitter animated" data-animation="fadeIn" data-animation-delay="200">
+                <a href="{{$Settings->twitter}}" target="_blank" class="social round dark-bg twitter animated" data-animation="fadeIn" data-animation-delay="200">
                     <i class="fa fa-twitter"></i>
                 </a>
 
                 <!-- Linkedin -->
-                <a href="#" target="_blank" class="social round dark-bg linkedin animated" data-animation="fadeIn" data-animation-delay="200">
+                <a href="{{$Settings->linkedin}}" target="_blank" class="social round dark-bg linkedin animated" data-animation="fadeIn" data-animation-delay="200">
                     <i class="fa fa-linkedin"></i>
                 </a>
 
                 <!-- YouTube -->
-                <a href="#" target="_blank" class="social round dark-bg youtube animated" data-animation="fadeIn" data-animation-delay="200">
+                <a href="{{$Settings->youtube}}" target="_blank" class="social round dark-bg youtube animated" data-animation="fadeIn" data-animation-delay="200">
                     <i class="fa fa-youtube"></i>
                 </a>
 
             </div><!-- End Address Soft Area -->
         </div><!-- End Inner -->
     </section><!-- End Address Section -->
-
+  
     	<!-- Google Map -->
 	<section id="map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.277444357953!2d36.8222756!3d-1.2821653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb39310a139138d6!2sDesignekta%20Studios!5e0!3m2!1sen!2ske!4v1624263503497!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		<iframe src="{{$Settings->map}}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 	</section>
 	<!-- End Google Map -->
+
+	@endforeach

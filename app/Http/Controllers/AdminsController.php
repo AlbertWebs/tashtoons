@@ -12,7 +12,11 @@ use App\Models\Copyright;
 
 use App\Models\FAQ;
 
+use App\Models\Client;
+
 use App\Models\About;
+
+use App\Models\Award;
 
 use App\Models\How;
 
@@ -962,6 +966,104 @@ class AdminsController extends Controller
         return Redirect::back();
     }
 
+    // 
+    // Client
+    public function client(){
+
+        $Client = Client::all();
+        $page_title = 'list';
+        $page_name = 'Client';
+        return view('admin.admin.client',compact('page_title','Client','page_name'));
+    }
+
+    public function addClient(){
+        $Category = DB::table('categories')->orderBy('id','DESC')->get();
+        $page_title = 'formfiletext';//For Layout Inheritance
+        $page_name = 'add Client';
+        return view('admin.admin.addClient',compact('page_title','page_name','Category'));
+    }
+    
+    public function add_Client(Request $request){
+        activity()->log('Evoked an add Client Operation');
+        $title = $request->title;
+        $link = $request->link;
+        $path = 'uploads/clients';
+        if(isset($request->image_one)){ 
+            
+                
+                $file = $request->file('image_one');
+                $filename = str_replace(' ', '', $file->getClientOriginalName());
+                $timestamp = new Datetime();
+                $new_timestamp = $timestamp->format('Y-m-d H:i:s');
+                $image_main_temp = $new_timestamp.'image'.$filename;
+                $image_one = str_replace(' ', '',$image_main_temp);
+                $file->move($path, $image_one);
+                
+        }else{
+            $image_one = $request->pro_img_cheat;
+        }
+
+        $Client = new Client; 
+        $Client->title = $request->title;
+        $Client->link = $request->link;
+        $Client->image = $image_one;
+        $Client->save();
+        Session::flash('message', "Post Saved Successfully");
+        return Redirect::back();
+    
+        
+     
+        
+        $Client->save();
+      
+        Session::flash('message', "Client Has Been Added");
+        return Redirect::back();
+    }
+    
+   
+    
+    public function editClient($id){
+        $Client = Client::find($id);
+        $page_title = 'formfiletext';
+        $page_name = 'Edit Client';
+        return view('admin.admin.editClient',compact('page_title','Client','page_name'));
+    }
+    
+    
+    public function edit_Client(Request $request, $id){
+        $path = 'uploads/clients';
+        if(isset($request->image_one)){
+          
+                
+                $file = $request->file('image_one');
+                $filename = str_replace(' ', '', $file->getClientOriginalName());
+                $timestamp = new Datetime();
+                $new_timestamp = $timestamp->format('Y-m-d H:i:s');
+                $image_main_temp = $new_timestamp.'image'.$filename;
+                $image_one = str_replace(' ', '',$image_main_temp);
+                $file->move($path, $image_one);
+                
+        }else{
+            $image_one = $request->image_one_cheat; 
+        }
+    
+      
+        
+        $updateDetails = array(
+            'title' => $request->title,
+            'link' => $request->link,
+            'image' =>$image_one,
+        );
+        DB::table('clients')->where('id',$id)->update($updateDetails);
+        Session::flash('message', "Changes have been saved");
+        return Redirect::back();
+    }
+    
+    public function delete_Client($id){
+        DB::table('clients')->where('id',$id)->delete();
+        Session::flash('message', "Post Deleted Successfully");
+        return Redirect::back();
+    }
     // Awards
 
     public function addAward(){
@@ -997,7 +1099,7 @@ class AdminsController extends Controller
         $awards = new Award; 
         $awards->title = $request->title;
         $awards->content = $request->content;
-        $awards->image_one = $image_one;
+        $awards->image = $image_one;
         $awards->save();
         Session::flash('message', "Post Saved Successfully");
         return Redirect::back();
@@ -1036,7 +1138,7 @@ class AdminsController extends Controller
         $updateDetails = array(
             'title' => $request->title,
             'content' => $request->content,
-            'image_one' =>$image_one,
+            'image' =>$image_one,
         );
         DB::table('awards')->where('id',$id)->update($updateDetails);
         Session::flash('message', "Changes have been saved");
@@ -1735,6 +1837,14 @@ class AdminsController extends Controller
         return response()->json(['success'=>'Deleted Successfully!']);
     }
 
+    public function deleteClientAjax(Request $request){
+        $id = $request->id;
+        DB::table('clients')->where('id',$id)->delete();
+        return response()->json(['success'=>'Deleted Successfully!']);
+    }
+
+    
+
     public function deleteSliderAjax(Request $request){
         activity()->log('Evoked a delete Slider Request');
         $id = $request->id;
@@ -1846,6 +1956,13 @@ class AdminsController extends Controller
 
         $id = $request->id;
         DB::table('services')->where('id',$id)->delete();
+        return response()->json(['success'=>'Deleted Successfully!']);
+    }   
+
+    public function deleteAwardAjax(Request $request){
+
+        $id = $request->id;
+        DB::table('awards')->where('id',$id)->delete();
         return response()->json(['success'=>'Deleted Successfully!']);
     }   
 

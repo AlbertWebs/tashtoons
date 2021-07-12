@@ -4,7 +4,7 @@
 <!--== BODY CONTNAINER ==-->
  <div class="container-fluid sb2">
     <div class="row">
-        @include('admin.sidebar')
+        @include('admin.layout.sidebar')
         @foreach ($About as $Setting)
         <!--== BODY INNER CONTAINER ==-->
         <div class="sb2-2">

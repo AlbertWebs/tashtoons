@@ -1,4 +1,8 @@
-	<!-- Portfolio Section -->
+<?php $Awards = DB::table('awards')->limit('3')->inRandomOrder()->get(); ?>	
+@if($Awards->isEmpty())
+
+@else
+<!-- Portfolio Section -->
 	<section id="clients"  class="container mage-bg soft-bg-1 animated" data-animation="fadeIn" data-animation-delay="200">
 		<!-- Portfolio Inner -->
 		<div class="inner">
@@ -21,19 +25,17 @@
 	<div class="inner feature-second-area t-center">
 		<div class="container">
 			
-				<div class="row">			
+				<div class="row">	
+					<?php $Awards = DB::table('awards')->get(); ?>	
+					@foreach ($Awards as $awards)
 					<div  class="col-lg-4 col-md-6 col-sm-12 animated award-image" data-animation="fadeIn" data-animation-delay="300">
-						<img src="{{url('/')}}/theme/images/awards.jpg" />
+						<img src="{{url('/')}}/uploads/awards/{{$awards->image}}" />
 					</div>
-					<div class="col-lg-4 col-md-6 col-sm-12 animated award-image" data-animation="fadeIn" data-animation-delay="300">
-						<img src="{{url('/')}}/theme/images/awards.jpg" />
-					</div>
-					<div class="col-lg-4 col-md-6 col-sm-12 animated award-image" data-animation="fadeIn" data-animation-delay="300">
-						<img src="{{url('/')}}/theme/images/awards.jpg" />    
-					</div>
+					@endforeach	
 				</div>
 			
 		</div>
 	</div>
 </section>
+@endif
 	
