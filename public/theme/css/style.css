@@ -799,12 +799,12 @@
 
 	#home .home-elements .home-inner{
 		position: relative;
-		top:89%;
-		left:6%;
-		height: auto;
+		top:50%;
+		/* left:50%; */
+		max-width:1060px;
 		width:100%;
-		max-width:860px;
-		/* margin:0 auto; */
+		height: auto;
+		margin:0 auto;
 		-webkit-transform: translateY(-50%);
 		-moz-transform: translateY(-50%);
 		transform: translateY(-50%);
@@ -4985,6 +4985,10 @@ body.parallax #clients{
 	
 }
 
+/* .transparent{
+	color:transparent !important;
+	text-shadow: 1px 1px #ffffff;
+} */
 
 .img-thumbnail{
 	max-width: 100%;
@@ -5014,4 +5018,12 @@ body.parallax #clients{
 	max-width: 100%;
     max-height: 100%;
 	
+}
+
+.transparency{
+	opacity:0.3 !important
+}
+
+.show-btn{
+	border-radius:10px;
 }

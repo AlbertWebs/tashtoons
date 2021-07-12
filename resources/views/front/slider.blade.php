@@ -15,32 +15,35 @@
         <!-- End Video -->
 
         <!-- Home Elements v2 -->
-        <div class="home-elements animated" data-animation="fadeInLeft" data-animation-delay="9000" data-animation-duration="8000">
+        <div class="home-elements">
             <!-- Home Inner -->
-            <div class="home-inner v2 t-left">
+            <div class="home-inner v2 t-center">
                 
                 <!-- Home Text Slider -->
-                <div class="home-text-slider relative">
-                    <div class="text-slider clearfix">
-                        <!-- Home Text Slides -->
-                        <ul class="home-texts clearfix t-left semibold">
-                            <li class="slide white uppercase">We are in Film</li>
-                            <li class="slide white uppercase">We are in Production</li>
-                            <li class="slide white uppercase">We are in Animation</li>
-                        </ul>
-                        <!-- End Home Text Slides -->
-                        <!-- Home Fixed Text -->
-                        {{-- <h1 class="home-fixed-text t-left">XYZ Productions is an audiovisual production company founded in February 2004. For over 17 years we have been involved in the production of Television, Radio, Documentary, online branded content, 2D & 3D Animation commercials.</h1>  --}}
-                        {{-- call to action --}}
-                        {{-- <h3 class=""> --}}
-                            {{-- <br><br> --}}
-                            <div class="clearfix"><br></div>
-                            <a href="#showreel" class="home-btn uppercase scroll">
-                                Watch Showreel <i class="fa fa-video-camera"></i>
-                            </a>
-                        {{-- </h3> --}}
+                <li data-transition="random" data-slotamount="7" data-masterspeed="1000" class="tp-revslider-slidesli active-revslide current-sr-slide-visible" style="width: 100%; height: 100%; overflow: hidden; z-index: 20; visibility: inherit; opacity: 1;">
+                    <!-- MAIN IMAGE -->
+                    <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="images/slider/slidebg.jpg" data-src="images/slider/slidebg.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;images/slider/slidebg.jpg&quot;); background-size: cover; background-position: center top; width: 100%; height: 100%; opacity: 1; visibility: inherit;"></div></div>
+                    <!-- LAYERS -->
+
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption customin customout text-type5 bigger t-center uppercase semibold start transparency animated" data-animation="fadeInDown" data-animation-delay="1000" >
+                            we create awesome Films
                     </div>
-                </div>
+
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption customin customout text-type6 bigger t-center start transparency animated" data-animation="fadeInUp" data-animation-delay="1000" >
+                            We are <span class="gray-tone">Level Five Productions</span> Film Production is our <span class="gray-tone"> greatest Passion !</span>
+                    </div>
+
+                    <br><br>
+                    <!-- LAYER NR. 3 -->
+                    <div class="tp-caption customin customout home-button-1 uppercase start show-btn animated" data-animation="fadeInLeft" data-animation-delay="1000">
+                        <a href="#showreel" target="_blank" class="uppercase scroll">
+                            Watch Our Showreel <i class="fa fa-video-camera"></i>
+                        </a>
+                    </div>
+
+                </li>
                 <!-- End Home Text Slider -->
 
                 

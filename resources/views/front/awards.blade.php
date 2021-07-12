@@ -26,7 +26,7 @@
 		<div class="container">
 			
 				<div class="row">	
-					<?php $Awards = DB::table('awards')->get(); ?>	
+					<?php $Awards = DB::table('awards')->limit(3)->get(); ?>	
 					@foreach ($Awards as $awards)
 					<div  class="col-lg-4 col-md-6 col-sm-12 animated award-image" data-animation="fadeIn" data-animation-delay="300">
 						<img src="{{url('/')}}/uploads/awards/{{$awards->image}}" />

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
+<?php $SiteSettings = DB::table('site_settings')->get(); ?>
+@foreach($SiteSettings as $Settings)
 <head>
 
     <meta charset="utf-8" />
@@ -81,7 +82,7 @@
 				<!-- Navigation Logo Link -->
 				<a href="#home" class="scroll">
 					<!-- Your Logo -->
-					<img src="images/logo.png" class="site_logo" alt=""/>
+					<img src="{{url('/')}}/uploads/logo/{{$Settings->logo}}" class="{{$Settings->sitename}}" alt=""/>
 				</a>
 			</div>
 			<!-- Mobile Menu Button -->
@@ -118,7 +119,7 @@
 	<!-- Footer -->
 	<footer class="footer dark-footer t-center">
 		<!-- Logo -->
-		<img src="images/logo.png" alt=""/>
+		<img src="{{url('/')}}/uploads/logo/{{$Settings->logo}}" alt=""/>
 		<!-- Text -->
 		<p class="uppercase semibold">
 			© <?php echo date('Y') ?> all right reserved | Powered by <a href="https://designekta.com" target="_blank">Tashtoons</a> 
@@ -190,4 +191,5 @@
 
 
 </body>
+@endforeach
 </html>
