@@ -98,13 +98,13 @@ MAGNIFIC POPUP
 	        	youtube: {
 	        		index: 'youtube.com/', 
 	        		id: 'v=', 
-	        		src: 'http://www.youtube.com/embed/%id%?autoplay=1' 
+	        		src: 'https://www.youtube.com/embed/%id%?autoplay=1' 
 	        	},
 	        	//vimeo videos
 	        	vimeo: {
 	        		index: 'vimeo.com/',
 	        		id: '/',
-	        		src: 'http://player.vimeo.com/video/%id%?autoplay=1'
+	        		src: 'https://player.vimeo.com/video/%id%?autoplay=1'
 	        	},
 	        	//google maps
 	        	gmaps: {
