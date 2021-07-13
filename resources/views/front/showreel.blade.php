@@ -25,7 +25,7 @@
             <!-- Item -->
             <div class="item">
              <!-- Item Link -->
-                    <a href="https://vimeo.com/manage/videos/{{$Vid->link}}}" class="video-link mp-video" class="work-image">
+                    <a href="https://vimeo.com/manage/videos/{{$Vid->link}}" class="video-link mp-video" class="work-image">
 						<!-- Item Image -->
                         <?php
                             $imgid = $Vid->link;
