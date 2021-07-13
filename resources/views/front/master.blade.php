@@ -35,7 +35,7 @@
 
 
     <!--Favicon -->
-	<link rel="icon" type="image/png" href="images/favicon.png" />
+	@include('favicon')
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{asset('theme/css/reset.css')}}" />
 	<link rel="stylesheet" href="{{asset('theme/css/animate.min.css')}}" />
