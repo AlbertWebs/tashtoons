@@ -451,7 +451,7 @@ class AdminsController extends Controller
             $image = $request->image_cheat;
         }
         $updateDetails = array(
-            'name'=>$request->name,
+         
             'section' =>$request->section,
             'image' =>$image
         );

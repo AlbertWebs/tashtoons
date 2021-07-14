@@ -2,8 +2,11 @@
 @if($Awards->isEmpty())
 
 @else
+
+<?php $Banner = DB::table('banners')->where('section','Awards')->get(); ?>
+@foreach ($Banner as $banner)
 <!-- Portfolio Section -->
-	<section id="clients"  class="container mage-bg soft-bg-1 animated" data-animation="fadeIn" data-animation-delay="200">
+	<section id="clients"  class="container mage-bg soft-bg-1 animated" data-animation="fadeIn" data-animation-delay="200" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
 		<!-- Portfolio Inner -->
 		<div class="inner">
 			<!-- Header -->
@@ -19,7 +22,7 @@
 
 	</section><!-- End Portfolio Section -->
 	{{-- Awards Goes Here --}}
-</section><!-- End Portfolio Section -->
+@endforeach
 {{--  --}}
 <section id="awards" class="client container">
 	<div class="inner feature-second-area t-center">

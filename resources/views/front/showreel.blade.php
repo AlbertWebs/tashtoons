@@ -1,4 +1,7 @@
-<section id="showreel" class="watch-our-video m_slide1 t-center min-height animated" data-animation="fadeIn" data-animation-delay="200">
+<?php $Banner = DB::table('banners')->where('section','Showreel')->get(); ?>
+    @foreach ($Banner as $banner)
+
+<section id="showreel" class="watch-our-video m_slide1 t-center min-height animated" data-animation="fadeIn" data-animation-delay="200" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
     
     <a id="reveal" href="https://vimeo.com/manage/videos/572640847" class="video-link mp-video">
         <h2 class="tv-com">TV Commercials</h2>
@@ -9,6 +12,7 @@
     </a>
 
 </section>
+@endforeach
 {{--  --}}
 <!-- Featured Works -->
 <section id="featured-works" class="container soft-bg-1 extra-showreel">

@@ -1,4 +1,6 @@
-<section id="portfolio" class="container soft-bg-1">
+<?php $Banner = DB::table('banners')->where('section','Gallery')->get(); ?>
+@foreach ($Banner as $banner)
+<section id="portfolio" class="container soft-bg-1" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
 		
     <!-- Portfolio Inner -->
     <div class="inner">
@@ -53,3 +55,4 @@
         </div><!-- End Portfolio Items -->
     </div><!-- End Portfolio -->
 </section>
+@endforeach

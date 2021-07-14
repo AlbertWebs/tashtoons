@@ -95,8 +95,10 @@
 		</div><!-- End Inner -->
 	</section><!-- End Contact Section -->
 
+	<?php $Banner = DB::table('banners')->where('section','Address')->get(); ?>
+    @foreach ($Banner as $banner)
     <!-- Adress Section -->
-    <section id="address" class="container soft-bg-1 parallax7">
+    <section id="address" class="container soft-bg-1 parallax7" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
         <!-- Inner -->
         <div class="inner">
             <!-- Address Soft Area -->
@@ -145,6 +147,7 @@
             </div><!-- End Address Soft Area -->
         </div><!-- End Inner -->
     </section><!-- End Address Section -->
+	@endforeach
   
     	<!-- Google Map -->
 	<section id="map">

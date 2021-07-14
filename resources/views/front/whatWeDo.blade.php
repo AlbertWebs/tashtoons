@@ -1,6 +1,8 @@
 
+<?php $Banner = DB::table('banners')->where('section','What We Do')->get(); ?>
+@foreach ($Banner as $banner)
 	<!-- What We Do Section -->
-	<section id="what-we-do" class="container soft-bg-1 min-height animated" data-animation="fadeIn" data-animation-delay="200">
+	<section id="what-we-do" class="container soft-bg-1 min-height animated" data-animation="fadeIn" data-animation-delay="200" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
 		<?php $About = DB::table('abouts')->get(); ?>
 		@foreach ($About as $about)
 		<!-- What We Do Inner -->
@@ -18,3 +20,6 @@
 		</div><!-- End What We Do Inner -->
 		@endforeach
 	</section><!-- End What We Do Section -->
+
+	
+    @endforeach

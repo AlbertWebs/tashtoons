@@ -1,6 +1,8 @@
 
+<?php $Banner = DB::table('banners')->where('section','Services')->get(); ?>
+@foreach ($Banner as $banner)
 <!-- What We Do Section -->
-<section id="servicess" class="container soft-bg-1 parallax animated" data-animation="fadeIn" data-animation-delay="200">
+<section id="servicess" class="container soft-bg-1 parallax animated" data-animation="fadeIn" data-animation-delay="200" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
     <!-- What We Do Inner -->
     <div class="inner">
         <!-- Header -->
@@ -12,7 +14,11 @@
     
     </div><!-- End What We Do Inner -->
 </section><!-- End What We Do Section -->
-<section id="featured-works" class="container soft-bg-1">
+@endforeach
+
+<?php $Banner = DB::table('banners')->where('section','Services2')->get(); ?>
+@foreach ($Banner as $banner)
+<section id="featured-works" class="container soft-bg-1" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
 
     <!-- Inner -->
     <div class="inner fullwidth">
@@ -142,3 +148,4 @@
         </div>
     </div>
 </section>
+@endforeach

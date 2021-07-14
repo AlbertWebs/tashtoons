@@ -35,7 +35,7 @@ class ContactUsFormController extends Controller {
             'subject' => $request->get('subject'),
             'user_query' => $request->get('message'),
         ), function($message) use ($request){
-            $message->from($request->email,'Level Five Productions');
+            $message->from($request->email,'Level Five Productions'); 
             $message->to('albertmuhatia@gmail.com', 'Admin')->subject($request->get('subject'));
         });
 

@@ -2,8 +2,10 @@
     <?php $About = DB::table('abouts')->get(); ?>
     @foreach ($About as $about)
         <!-- Features Background -->
-    <div class="features-background parallax1 soft-bg-1" style="background-position: 50% 50%;"></div>
-
+    <?php $Banner = DB::table('banners')->where('section','About')->get(); ?>
+    @foreach ($Banner as $banner)
+    <div class="features-background soft-bg-1" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}'); background-position: 50% 50%;"></div>
+    @endforeach
     <!-- Features Inner -->
     <div class="inner features">
         <!-- Header -->

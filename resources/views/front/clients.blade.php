@@ -1,5 +1,7 @@
-	<!-- Portfolio Section -->
-	<section id="clients"  class="container mage-bg soft-bg-1 animated" data-animation="fadeIn" data-animation-delay="200">
+<?php $Banner = DB::table('banners')->where('section','Clients')->get(); ?>
+@foreach ($Banner as $banner)
+<!-- Portfolio Section -->
+	<section id="clients"  class="container mage-bg soft-bg-1 animated" data-animation="fadeIn" data-animation-delay="200" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
 		<!-- Portfolio Inner -->
 		<div class="inner">
 			<!-- Header -->
@@ -14,6 +16,7 @@
 
 
 	</section><!-- End Portfolio Section -->
+@endforeach
 	{{--  --}}
 	<section class="client">
 		<div class="container">

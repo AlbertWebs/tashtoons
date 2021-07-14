@@ -94,7 +94,7 @@ MAGNIFIC POPUP
 	$.extend(true, $.magnificPopup.defaults, {  
 	    iframe: {
 	        patterns: {
-	        	//youtube videos
+	        	//youtube videos award videos
 	        	youtube: {
 	        		index: 'youtube.com/', 
 	        		id: 'v=', 
@@ -102,7 +102,7 @@ MAGNIFIC POPUP
 	        	},
 	        	//vimeo videos
 	        	vimeo: {
-	        		index: 'vimeo.com/',
+	        		index: 'vimeo.com/', 
 	        		id: '/',
 	        		src: 'https://player.vimeo.com/video/%id%?autoplay=1'
 	        	},
