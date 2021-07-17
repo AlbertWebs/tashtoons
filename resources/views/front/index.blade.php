@@ -17,8 +17,6 @@
 
 	@include('front.testimonials')
 
-	@include('front.awards')
-
 	@include('front.contact')
 
 @endsection

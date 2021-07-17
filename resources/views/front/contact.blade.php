@@ -95,64 +95,8 @@
 		</div><!-- End Inner -->
 	</section><!-- End Contact Section -->
 
-	<?php $Banner = DB::table('banners')->where('section','Address')->get(); ?>
-    @foreach ($Banner as $banner)
-    <!-- Adress Section -->
-    <section id="address" class="container soft-bg-1 parallax7" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
-        <!-- Inner -->
-        <div class="inner">
-            <!-- Address Soft Area -->
-            <div class="address-soft t-center">
 
-                <!-- Top Phone Button -->
-                <a href="tel:254720000000" class="phone-button round white">
-                    <i class="fa fa-phone"></i>
-                </a>
-
-                <!-- Phone -->
-                <h1 class="phone-text oswald white animated" data-animation="fadeIn" data-animation-delay="200">
-                    {{$Settings->mobile_one}}
-                </h1>
-
-                <!-- Address -->
-                <h2 class="phone-text oswald uppercase animated" data-animation="fadeIn" data-animation-delay="400">
-                    {{$Settings->location}}
-                </h2>
-
-                <!-- E-Mail -->
-                <a href="mailto:{{$Settings->email}}" class="mail-text uppercase oswald animated" data-animation="fadeInRight" data-animation-delay="600">
-                    {{$Settings->email}}
-                </a>
-
-                <!-- Social, Facebook -->
-                <a href="{{$Settings->facebook}}" target="_blank" class="social round dark-bg facebook animated" data-animation="fadeIn" data-animation-delay="200">
-                    <i class="fa fa-facebook"></i>
-                </a>
-
-                <!-- Twitter -->
-                <a href="{{$Settings->twitter}}" target="_blank" class="social round dark-bg twitter animated" data-animation="fadeIn" data-animation-delay="200">
-                    <i class="fa fa-twitter"></i>
-                </a>
-
-                <!-- Linkedin -->
-                <a href="{{$Settings->linkedin}}" target="_blank" class="social round dark-bg linkedin animated" data-animation="fadeIn" data-animation-delay="200">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-
-                <!-- YouTube -->
-                <a href="{{$Settings->youtube}}" target="_blank" class="social round dark-bg youtube animated" data-animation="fadeIn" data-animation-delay="200">
-                    <i class="fa fa-youtube"></i>
-                </a>
-
-            </div><!-- End Address Soft Area -->
-        </div><!-- End Inner -->
-    </section><!-- End Address Section -->
-	@endforeach
   
-    	<!-- Google Map -->
-	<section id="map">
-		<iframe src="{{$Settings->map}}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-	</section>
-	<!-- End Google Map -->
+   
 
 	@endforeach

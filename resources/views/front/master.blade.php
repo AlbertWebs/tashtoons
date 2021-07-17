@@ -99,7 +99,7 @@
 					<li><a href="#showreel" class="scroll">Showreel</a></li>
 					<li><a href="#portfolio" class="scroll">Gallery</a></li>
 					<li><a href="#clients" class="scroll">Clients</a></li>
-					<li><a href="#awards" class="scroll">Awards</a></li>
+					{{-- <li><a href="#awards" class="scroll">Awards</a></li> --}}
 					
 					<li><a href="#contact" class="scroll">contact</a></li>
 				</ul>
