@@ -6,9 +6,12 @@
 		<!-- Inner -->
 		<div class="inner">
 			<!-- Header -->
-			<h1 class="header about-header white uppercase dark oswald animated" data-animation="fadeInRight" data-animation-delay="200">
-				keep in touch
-			</h1>
+			<div class="features">
+				<div class="service-overlays animated" data-animation="fadeIn" data-animation-delay="800">
+					<img class="service-image responsive-image" src="{{url('/')}}/uploads/banners/contacts.webp" alt="" >
+					<br>
+				</div>
+			</div>
 			<!-- Header Strip(s) -->
 			<div class="header-strips-one"></div>
 			<!-- Header Description -->

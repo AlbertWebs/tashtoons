@@ -12,8 +12,6 @@
                 <img class="service-image responsive-image" src="{{url('/')}}/uploads/banners/services.webp" alt="" >
                 <br>
             </div>
-            {{-- <div class="header-strips-one t-right" ></div> --}}
-            <!-- Header Description -->
         </div>
         {{--  --}}
         <br><br>

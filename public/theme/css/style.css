@@ -5085,9 +5085,10 @@ html {
 }
 
 .enableBlur>* {
-	filter: blur(10px);
+	filter: blur(10px) !important;
   }
   
   .disableBlur {
-	filter: blur(0);
+	filter: blur(0) !important;
+    -webkit-filter: blur(0) !important; /* Safari 6.0 - 9.0 */
   }

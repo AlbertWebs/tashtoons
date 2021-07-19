@@ -5,9 +5,12 @@
     <!-- Portfolio Inner -->
     <div class="inner">
         <!-- Header -->
-        <h1 class="header about-header white uppercase dark oswald animated" data-animation="fadeInRight" data-animation-delay="300">
-            <span id="contents">Gallery</span>
-        </h1>
+        <div class="features">
+            <div class="service-overlays animated" data-animation="fadeIn" data-animation-delay="800">
+                <img class="service-image responsive-image" src="{{url('/')}}/uploads/banners/gallery.webp" alt="" >
+                <br>
+            </div>
+        </div>
         <!-- Header Strip(s) -->
         <div class="header-strips-one"></div>
         <!-- Header Description -->
@@ -20,19 +23,15 @@
         <!-- Portfolio Items -->
         <div class="portfolio-items t-center isotope" style="position: relative; overflow: hidden; height: 744px;">
 
-            <?php $Video = DB::table('videos')->inRandomOrder()->limit('10')->get(); ?>
-            @foreach($Video as $Vid)
+            <?php $Gallery = DB::table('galleries')->inRandomOrder()->limit('10')->get(); ?>
+            @foreach($Gallery as $Gallery)
             <!-- Item -->
             <div class="item five branding isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-                <?php
-                    $imgid = $Vid->link;
-                    $hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$imgid.php"));
-                    $thumbnail =  $hash[0]['thumbnail_large'];
-                ?>  
+                
                 <!-- Item Link -->
-                <a href="{{$thumbnail}}" data-rel="prettyPhoto[portfolio]" class="work-image gallery-thumbnail">
+                <a href="{{url('/')}}/uploads/gallery/{{$Gallery->image}}" data-rel="prettyPhoto[portfolio]" class="work-image gallery-thumbnail">
                     <!-- Item Image -->
-                    <img class="img-thumbnail" src="{{$thumbnail}}" alt="">
+                    <img class="img-thumbnail" src="{{url('/')}}/uploads/gallery/{{$Gallery->image}}" alt="">
                     <!-- Item Details -->
                     <div class="item-details">
                         <!-- Item Header -->

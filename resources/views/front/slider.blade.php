@@ -19,13 +19,13 @@
             <!-- Home Inner -->
             <div class="home-inner v2 t-left">
                 <div class="slider-overlays">
-                    <img class="slider-image animated" data-animation="fadeInLeft" data-animation-delay="2000" data-animation-duration="2000" src="{{url('/')}}/uploads/slider/info.png" alt="" >
+                    <img class="slider-image animated" data-animation="fadeInLeft" data-animation-delay="800" data-animation-duration="800" src="{{url('/')}}/uploads/slider/info.png" alt="" >
                     {{--  --}}
-                    <p class="font_8 animated" data-animation="fadeInLeft" data-animation-delay="3000" data-animation-duration="3000" style="font-size:15px; line-height:1.7em"><span style="font-size:15px"><span style="font-family:montserrat,sans-serif"><span style="letter-spacing:0.02em; color:#ffffff">Level Five Productions is an audiovisual production company, founded in February 2010. For over 11 years we have been involved in the production of Television, Radio, Documentary, online branded content, 2D &amp; 3D Animation commercials. </span></span></span></p>
+                    <p class="font_8 animated" data-animation="fadeInLeft" data-animation-delay="800" data-animation-duration="800" style="font-size:15px; line-height:1.7em"><span style="font-size:15px"><span style="font-family:montserrat,sans-serif"><span style="letter-spacing:0.02em; color:#ffffff">Level Five Productions is an audiovisual production company, founded in February 2010. For over 11 years we have been involved in the production of Television, Radio, Documentary, online branded content, 2D &amp; 3D Animation commercials. </span></span></span></p>
                     {{--  --}}
                     {{-- Button here --}}
                     <span><br></span>
-                    <a href="#showreel" target="_blank" class="uppercase showreel-btn scroll animated" data-animation="fadeInUp" data-animation-delay="5000" data-animation-duration="3000">
+                    <a href="#showreel" target="_blank" class="uppercase showreel-btn scroll animated" data-animation="fadeInUp" data-animation-delay="800" data-animation-duration="800">
                         Watch Our Showreel <i class="fa fa-video-camera"></i>
                     </a>
                     {{-- Button Here --}}
