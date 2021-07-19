@@ -34,7 +34,7 @@
                         <?php
                             $imgid = $Vid->link;
 
-                            $hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$imgid.php"));
+                            $hash = unserialize(file_get_contents("https://vimeo.com/api/v2/video/$imgid.php"));
 
                           
 
