@@ -17,4 +17,4 @@
 </section>
 @endforeach
 {{--  --}}
-@include('front.showreel')
+@include('front.showreels')
