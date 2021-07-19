@@ -9,7 +9,7 @@
 
 	@include('front.services')
 
-	{{-- @include('front.showreel')
+	@include('front.showreel')
 
     @include('front.gallery')
 
@@ -17,6 +17,6 @@
 
 	@include('front.testimonials')
 
-	@include('front.contact') --}}
+	@include('front.contact')
 
 @endsection

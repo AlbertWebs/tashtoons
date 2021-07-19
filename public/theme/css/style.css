@@ -5083,3 +5083,11 @@ html {
 .service-overlays{
 	text-align: center;
 }
+
+.enableBlur>* {
+	filter: blur(10px);
+  }
+  
+  .disableBlur {
+	filter: blur(0);
+  }

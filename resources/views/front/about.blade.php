@@ -1,4 +1,4 @@
-<section id="features" class="big-reserve container about-section min-height t-right">
+<section id="features" class="big-reserve container about-section min-height t-right p-80">
     <?php $About = DB::table('abouts')->get(); ?>
     @foreach ($About as $about)
         <!-- Features Background -->
@@ -9,7 +9,7 @@
     <!-- Features Inner -->
     <div class="features">
         <div class="about-overlays animated" data-animation="fadeInRight" data-animation-delay="800">
-            <img class="slider-image" src="{{url('/')}}/uploads/banners/about-us.webp" alt="" >
+            <img class="slider-image responsive-image" src="{{url('/')}}/uploads/banners/about-us.webp" alt="" >
             <br>
             <h2 class="description white about-text">
                 {!! html_entity_decode($about->about, ENT_QUOTES, 'UTF-8') !!}

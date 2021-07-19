@@ -2,7 +2,7 @@
 <?php $Banner = DB::table('banners')->where('section','What We Do')->get(); ?>
 @foreach ($Banner as $banner)
 	<!-- What We Do Section -->
-	<section id="what-we-do" class="container soft-bg-1 min-height t-right" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
+	<section id="what-we-do" class="container soft-bg-1 min-height t-right p-80" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
 		<?php $About = DB::table('abouts')->get(); ?>
 		@foreach ($About as $about)
 		<!-- What We Do Inner -->

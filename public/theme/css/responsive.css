@@ -1084,7 +1084,55 @@
 			position: relative;
 			top:60%;	
 		}
+		.about-overlays{
+			width:95%;
+			padding:10px 30px;
+		}
+
+		.what-image{
+			float:none;
+			width:60%;
+			margin: 0 auto;
+			/*  */
+			display:block;
+            margin:auto;
+		}
+
+		.about-image{
+			float:none;
+			width:60%;
+			margin: 0 auto;
+			/*  */
+			display:block;
+            margin:auto;
+		}
+		.responsive-image{
+			float:none;
+			width:60%;
+			margin: 0 auto;
+			/*  */
+			display:block;
+            margin:auto;
+		}
+
+		.description{
+			letter-spacing:0.02em;
+			font-size:13px;
+		}
+	.p-80{
+		padding-top:80px !important;
+		padding-bottom:80px !important;
 	}
+
+	.about-text{
+		text-align: center !important;
+	}
+
+	.what-text{
+		text-align: center !important;
+		margin-left:0px;
+	}
+}
 /* .................... */
 
 

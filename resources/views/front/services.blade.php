@@ -2,14 +2,14 @@
 <?php $Banner = DB::table('banners')->where('section','Services')->get(); ?>
 @foreach ($Banner as $banner)
 <!-- What We Do Section -->
-<section id="servicess" class="container soft-bg-1 parallax animated" data-animation="fadeIn" data-animation-delay="200" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
+<section id="servicess" class="container soft-bg-1 parallax p-80 animated" data-animation="fadeIn" data-animation-delay="200" style="background-image:url('{{url('/')}}/uploads/banners/{{$banner->image}}');">
     <!-- What We Do Inner -->
     <div class="inner">
         <!-- Header -->
         {{--  --}}
         <div class="features">
             <div class="service-overlays animated" data-animation="fadeIn" data-animation-delay="800">
-                <img class="service-image" src="{{url('/')}}/uploads/banners/services.webp" alt="" >
+                <img class="service-image responsive-image" src="{{url('/')}}/uploads/banners/services.webp" alt="" >
                 <br>
             </div>
             {{-- <div class="header-strips-one t-right" ></div> --}}
