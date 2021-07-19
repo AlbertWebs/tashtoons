@@ -6,9 +6,17 @@
     <!-- What We Do Inner -->
     <div class="inner">
         <!-- Header -->
-        <h1 class="header about-header white uppercase dark oswald animated" data-animation="fadeInRight" data-animation-delay="800">
-            Our Services
-        </h1><br><br>
+        {{--  --}}
+        <div class="features">
+            <div class="service-overlays animated" data-animation="fadeIn" data-animation-delay="800">
+                <img class="service-image" src="{{url('/')}}/uploads/banners/services.webp" alt="" >
+                <br>
+            </div>
+            {{-- <div class="header-strips-one t-right" ></div> --}}
+            <!-- Header Description -->
+        </div>
+        {{--  --}}
+        <br><br>
         <!-- Header Strip(s) -->
         {{-- <div class="header-strips-one"></div> --}}
     

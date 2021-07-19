@@ -1049,6 +1049,41 @@
 			width:100% !important;
 			height:100% !important;
 		}
+		/*  */
+		.slider-overlays{
+			position: relative;
+			width:90%;
+			margin-left:0;
+		}
+		
+		.slider-overlays p{
+			position: relative;
+			width:90%;
+			margin-left:20px;
+		}
+		
+		.showreel-btn{
+			position: relative;
+			top:10% !important;
+			background-color:#FF8800;
+			padding:10px;
+			margin-left:5px;
+			margin-top:5px;
+			border-radius:10px;
+			white-space: nowrap;
+			font-weight: 800;
+			color:#ffffff;
+			letter-spacing: 3px;
+		}
+		.slider-image{
+	      width:100%;
+		}
+		/*  */
+
+		#home .home-elements .home-inner{
+			position: relative;
+			top:60%;	
+		}
 	}
 /* .................... */
 
