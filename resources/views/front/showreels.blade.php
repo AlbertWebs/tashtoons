@@ -8,7 +8,7 @@
         <!-- Works -->
         <div class="works white" style="padding:0px !important">
             {{-- Iterations Starts here --}}
-            <?php $Video = DB::table('videos')->limit('100')->get(); ?>
+            <?php $Video = DB::table('videos')->limit('10')->get(); ?>
             @foreach($Video as $Vid)
             <!-- Item -->
             <div class="item">
@@ -16,16 +16,16 @@
                     <a href="https://vimeo.com/manage/videos/{{$Vid->link}}" class="video-link mp-video" class="work-image">
 						<!-- Item Image -->
                         <?php
-                        //  Get images
-                            // $imgid = $Vid->link;
+                            // Get images
+                            $imgid = $Vid->link;
 
-                            // $hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$imgid.php"));
+                            $hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$imgid.php"));
 
                           
 
-                            // $thumbnail =  $hash[0]['thumbnail_large'];
-                            // $title =  $hash[0]['title'];
-                            // $description =  $hash[0]['description'];
+                            $thumbnail =  $hash[0]['thumbnail_large'];
+                            $title =  $hash[0]['title'];
+                            $description =  $hash[0]['description'];
                             
                         ?>  
 						{{-- <img class="img-thumbnail pattern-black" src="{{$thumbnail}}" alt="" /> --}}
