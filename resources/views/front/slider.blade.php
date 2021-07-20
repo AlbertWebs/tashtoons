@@ -17,7 +17,8 @@
         <!-- Home Elements v2 -->
         <div class="home-elements">
             <!-- Home Inner -->
-            <div class="home-inner v2 t-left">
+            {{-- <div class="home-inner v2 t-left"> --}}
+            <div class="home-inner">
                 <div class="slider-overlays">
                     <img class="slider-image animated" data-animation="fadeInLeft" data-animation-delay="800" data-animation-duration="800" src="{{url('/')}}/uploads/slider/info.png" alt="" >
                     {{--  --}}
