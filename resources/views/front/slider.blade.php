@@ -20,9 +20,9 @@
             {{-- <div class="home-inner v2 t-left"> --}}
             <div class="home-inner">
                 <div class="slider-overlays">
-                    <img class="slider-image animated" data-animation="fadeInLeft" data-animation-delay="800" data-animation-duration="800" src="{{url('/')}}/uploads/slider/info.png" alt="" >
+                    <img class="slider-image animated" data-animation="fadeInLeft" data-animation-delay="100" data-animation-duration="100" src="{{url('/')}}/uploads/slider/info.png" alt="" >
                     {{--  --}}
-                    <p class="font_8 animated" data-animation="fadeInLeft" data-animation-delay="800" data-animation-duration="800" style="font-size:15px; line-height:1.7em;">
+                    <p class="font_8 animated" data-animation="fadeInLeft" data-animation-delay="100" data-animation-duration="100" style="font-size:15px; line-height:1.7em;">
                         <span style="letter-spacing:0.02em; color:#ffffff; font-family:montserrat,sans-serif; font-size:15px">
                             Level Five Productions is an audiovisual production company, founded in February 2010. For over 11 years we have been involved in the production of Television, Radio, Documentary, online branded content, 2D &amp; 3D Animation commercials. 
                         </span>
@@ -30,7 +30,7 @@
                     {{--  --}}
                     {{-- Button here --}}
                     <span><br></span>
-                    <a href="#showreel" target="_blank" class="uppercase showreel-btn scroll animated" data-animation="fadeInUp" data-animation-delay="800" data-animation-duration="800">
+                    <a href="#showreel" target="_blank" class="uppercase showreel-btn scroll animated" data-animation="fadeInUp" data-animation-delay="100" data-animation-duration="100">
                         Watch Our Showreel <i class="fa fa-video-camera"></i>
                     </a>
                     {{-- Button Here --}}

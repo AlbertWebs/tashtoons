@@ -7,7 +7,7 @@
 		@foreach ($About as $about)
 		<!-- What We Do Inner -->
 		<div class="features">
-			<div class="about-overlays animated" data-animation="fadeInLeft" data-animation-delay="800" data-animation-duration="800">
+			<div class="about-overlays animated" data-animation="fadeInLeft" data-animation-delay="100" data-animation-duration="800">
 				<img class="what-image" src="{{url('/')}}/uploads/banners/what-we-do.webp" alt="" >
 				<br>
 				<h2 class="description white what-text">

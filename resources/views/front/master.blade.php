@@ -167,7 +167,7 @@
 	<script type="text/javascript" src="{{asset('theme/js/jquery.magnific-popup.min.js')}}"></script>
 	<script type="text/javascript" src="{{asset('theme/js/jquery.prettyPhoto.js')}}"></script>
 	<script type="text/javascript" src="{{asset('theme/js/plugins.js')}}"></script>
-	<script type="text/javascript" src="{{asset('theme/js/google-map.js')}}"></script>
+	{{-- <script type="text/javascript" src="{{asset('theme/js/google-map.js')}}"></script> --}}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js" integrity="sha512-p55Bpm5gf7tvTsmkwyszUe4oVMwxJMoff7Jq3J/oHaBk+tNQvDKNz9/gLxn9vyCjgd6SAoqLnL13fnuZzCYAUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<!-- Theme Panel -->
 	<script type="text/javascript" src="{{asset('theme/theme_panel/theme_panel.js')}}"></script>

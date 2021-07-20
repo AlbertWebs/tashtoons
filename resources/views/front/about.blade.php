@@ -8,7 +8,7 @@
     @endforeach
     <!-- Features Inner -->
     <div class="features">
-        <div class="about-overlays animated" data-animation="fadeInRight" data-animation-delay="800">
+        <div class="about-overlays animated" data-animation="fadeInRight" data-animation-delay="100">
             <img class="slider-image responsive-image" src="{{url('/')}}/uploads/banners/about-us.webp" alt="" >
             <br>
             <h2 class="description white about-text">
