@@ -66,11 +66,11 @@
 
 
 	<!-- Page Loader -->
-	<section id="pageloader">
+	{{-- <section id="pageloader">
 		<div class="outter colored-border">
 			<div class="mid colored-border"></div>
 		</div>
-	</section>
+	</section> --}}
 
 
 
