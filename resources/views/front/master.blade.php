@@ -39,7 +39,7 @@
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{asset('theme/css/reset.css')}}" />
 	<link rel="stylesheet" href="{{asset('theme/css/animate.min.css')}}" />
-	<link rel="stylesheet" href="{{asset('theme/css/bootstrap.min.css')}}" />
+	<link rel="stylesheet" href="{{asset('theme/css/bootstrap.min.css')}}" async />
 	<link rel="stylesheet" href="{{asset('theme/css/font-awesome.min.css')}}" />
 	<link rel="stylesheet" href="{{asset('theme/css/owl.carousel.css')}}" />
 	<link rel="stylesheet" href="{{asset('theme/css/socials.css')}}" />
@@ -47,7 +47,7 @@
 	<link rel="stylesheet" href="{{asset('theme/css/magnific-popup.css')}}" />
 	<link rel="stylesheet" href="{{asset('theme/css/prettyPhoto.css')}}" />
 	<!-- Page Styles -->
-	<link rel="stylesheet" href="{{asset('theme/css/style.css')}}" />
+	<link rel="stylesheet" href="{{asset('theme/css/style.css')}}" async />
 	<link rel="stylesheet" href="{{asset('theme/css/responsive.css')}}" />
 	<!-- End Page Styles -->
 	<!-- Page Layout Color, night or dark -->
