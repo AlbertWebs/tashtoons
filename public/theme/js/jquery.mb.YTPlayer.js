@@ -23,11 +23,11 @@ if(typeof ytp != "object")
 
 function onYouTubePlayerAPIReady() {
 
-	if(ytp.YTAPIReady)
-		return;
+	// if(ytp.YTAPIReady)
+	// 	return;
 
-	ytp.YTAPIReady=true;
-	jQuery(document).trigger("YTAPIReady");
+	// ytp.YTAPIReady=true;
+	// jQuery(document).trigger("YTAPIReady");
 }
 
 (function (jQuery, ytp) {
