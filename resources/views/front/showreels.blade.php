@@ -17,15 +17,15 @@
 						<!-- Item Image -->
                         <?php
                             // Get images
-                            $imgid = $Vid->link;
+                            // $imgid = $Vid->link;
 
-                            $hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$imgid.php"));
+                            // $hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$imgid.php"));
 
                           
 
-                            $thumbnail =  $hash[0]['thumbnail_large'];
-                            $title =  $hash[0]['title'];
-                            $description =  $hash[0]['description'];
+                            // $thumbnail =  $hash[0]['thumbnail_large'];
+                            // $title =  $hash[0]['title'];
+                            // $description =  $hash[0]['description'];
                             
                         ?>  
 						{{-- <img class="img-thumbnail pattern-black" src="{{$thumbnail}}" alt="" /> --}}
@@ -38,12 +38,12 @@
                     <div class="texts">
                         <!-- Item Header -->
                         <h1 class="f-head oswald normal uppercase">
-                            {{$title}}
+                            {{$Vid->title}}
                         </h1>
 
                         <!-- Item Description -->
                         <h2 class="f-text open-sans normal">
-                            {{$description}}
+                            {{$Vid->title}}
                         </h2>
                     </div>
                 <!-- End Texts -->
