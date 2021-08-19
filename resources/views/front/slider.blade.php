@@ -20,11 +20,20 @@
             {{-- <div class="home-inner v2 t-left"> --}}
             <div class="home-inner">
                 <div class="slider-overlays">
-                    <img class="slider-image animated" data-animation="fadeInLeft" data-animation-delay="100" data-animation-duration="100" src="{{url('/')}}/uploads/slider/info.png" alt="" >
+                    <img class="slider-image animated" data-animation="fadeInLeft" data-animation-delay="100" data-animation-duration="100" src="{{url('/')}}/uploads/slider/level5Productions-04.png" alt="" >
                     {{--  --}}
                     <p class="font_8 animated" data-animation="fadeInLeft" data-animation-delay="100" data-animation-duration="100" style="font-size:15px; line-height:1.7em;">
                         <span style="letter-spacing:0.02em; color:#ffffff; font-family:montserrat,sans-serif; font-size:15px">
-                            Level Five Productions is an audiovisual production company, founded in February 2010. For over 11 years we have been involved in the production of Television, Radio, Documentary, online branded content, 2D &amp; 3D Animation commercials. 
+                            Home to a robust roster of highly experienced
+                            directors and producers with distinct yet
+                            complementary strengths and passions, we
+                            create compelling content for every platform
+                            from traditional TVCs and documentaries to
+                            digital content, music videos and stills
+                            campaigns. Based in Nairobi Level Five offers a
+                            stable of hot young talent perfectly positioned
+                            to provide the fresh content today's market
+                            demands. 
                         </span>
                     </p>
                     {{--  --}}

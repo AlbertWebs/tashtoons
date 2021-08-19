@@ -5,7 +5,7 @@
    
     @include('front.about')
 	
-    @include('front.whatWeDo')
+    {{-- @include('front.whatWeDo') --}}
 
 	@include('front.services')
 

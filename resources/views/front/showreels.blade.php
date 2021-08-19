@@ -8,7 +8,7 @@
         <!-- Works -->
         <div class="works white" style="padding:0px !important">
             {{-- Iterations Starts here --}}
-            <?php $Video = DB::table('videos')->limit('10')->get(); ?>
+            <?php $Video = DB::table('videos')->get(); ?>
             @foreach($Video as $Vid)
             <!-- Item -->
             <div class="item">
